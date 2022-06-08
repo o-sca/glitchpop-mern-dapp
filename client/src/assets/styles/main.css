@@ -1,4 +1,41 @@
 main {
   display: flex;
-  
+  flex-direction: column;
+  padding-left: 242px;
+  padding-right: 245px;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  font-family: "Graphie";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about-us > .left {
+  padding-top: 50px;
+  width: 344px;
+  margin-right: 145px;
+}
+
+.about-us > .left img {
+  margin-bottom: 31px;
+}
+
+@font-face {
+  font-family: "Graphie";
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.svg#Graphie")
+      format("svg");
 }
