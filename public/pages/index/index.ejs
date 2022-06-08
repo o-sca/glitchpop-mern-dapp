@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="infura" content="<%= infura %>">
+    <meta name="formatic" content="<%= formatic %>">
+    
+    <title>dApp Template</title>
+
+    <link rel="stylesheet" href="/pages/index/index.css">
+    <link rel="icon" type="image/x-icon" href="../../icons/flavicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <button class="connect-wallet" id="connect-wallet">Connect</button>
+        <button class="dc-wallet" id="dc-wallet">Disconnect</button>
+        <button class="mint-btn" id="mint-btn">Mint</button>
+        <select name="num-mints" id="num-mints">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <div class="sale-status"></div>
+        <div class="tx-status"></div>
+        <div class="wallet-info">
+            <div class="wallet-address"></div>
+            <div class="wallet-balance"></div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <script type="text/javascript" src="/pages/index/contract.js"></script>
+    <script type="text/javascript" src="/pages/index/index.js"></script>
+</body>
+</html>

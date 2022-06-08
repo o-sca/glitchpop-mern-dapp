@@ -1,0 +1,11 @@
+* {
+    font-family: 'Heebo', sans-serif;
+}
+
+.dc-wallet {
+    display: none;
+}
+
+.connect-wallet {
+    display: inline;
+}
