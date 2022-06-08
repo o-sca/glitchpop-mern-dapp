@@ -7,10 +7,11 @@ import mintHover from "../assets/images/Mint-Now-Hover.svg";
 import "../assets/styles/header.css";
 
 import { useState } from "react";
+import { twitterEvent, discordEvent } from "./Socials.handler";
 
 const Header = () => {
   const [hover, setHover] = useState([]);
-
+  
   function handleMouseIn() {
     setHover(true);
 	};
@@ -24,8 +25,8 @@ const Header = () => {
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="container">
         <div className="socials">
-          <img src={twitter} alt="twitter" />
-          <img src={discord} alt="discord" />
+          <img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} />
+          <img src={discord} alt="discord" id="discord" onClick={discordEvent} />
         </div>
         <img src={logo} alt="logo" className="logo" />
       </div>

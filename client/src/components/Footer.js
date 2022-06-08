@@ -3,6 +3,8 @@ import discord from "../assets/images/Discord Button.svg";
 import logo from "../assets/images/footer-logo.svg";
 import "../assets/styles/footer.css";
 
+import { twitterEvent, discordEvent } from "./Socials.handler";
+
 const Footer = () => {
 	return ( 
 		<footer>
@@ -17,8 +19,8 @@ const Footer = () => {
 			</div>
 			<p className="cr">Copyright 2022© Glitchpop All Rights Reserved</p>
 			<div className="footer-socials">
-					<img src={twitter} alt="twitter" />
-          <img src={discord} alt="discord" />
+					<img src={twitter} alt="twitter" onClick={twitterEvent} />
+          <img src={discord} alt="discord" onClick={discordEvent} />
 			</div>
 		</footer>
 	);

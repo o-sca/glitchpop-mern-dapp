@@ -43,4 +43,5 @@ footer {
 
 .footer-socials img {
   margin-right: 16px;
+  cursor: pointer;
 }

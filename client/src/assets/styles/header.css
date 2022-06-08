@@ -42,6 +42,7 @@ header {
 
 .socials img {
   margin-right: 16px;
+  cursor: pointer;
 }
 
 .mint {
