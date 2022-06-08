@@ -1,6 +1,6 @@
 import calvinAvatar from "../../assets/images/calvin.svg";
 import joieAvatar from "../../assets/images/joie.svg";
-import oscarAvatar from "../../assets/images/oscar.svg";
+import strongsideAvatar from "../../assets/images/strongside.svg";
 import trudyAvatar from "../../assets/images/trudy.svg";
 
 export const whoAreWeData = [
@@ -17,7 +17,7 @@ export const whoAreWeData = [
     "bio": "Likes to do marketing."
   },
   {
-    "avatar": oscarAvatar,
+    "avatar": strongsideAvatar,
     "name": "strongside",
     "position": "Full Stack Developer",
     "bio": "Likes to develop."
