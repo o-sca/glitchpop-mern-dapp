@@ -1,5 +1,5 @@
-import twitter from "../assets/images/twitter-button.svg";
-import discord from "../assets/images/Discord Button.svg";
+import twitter from "../assets/buttons/twitter-button.svg";
+import discord from "../assets/buttons/Discord Button.svg";
 import logo from "../assets/images/footer-logo.svg";
 import "../assets/styles/footer.css";
 

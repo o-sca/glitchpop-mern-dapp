@@ -1,9 +1,9 @@
 import avatar from "../assets/images/avatar.svg";
 import logo from "../assets/images/logo.svg";
-import twitter from "../assets/images/twitter-button.svg";
-import discord from "../assets/images/Discord Button.svg";
-import mint from "../assets/images/Mint-Now-Button.svg";
-import mintHover from "../assets/images/Mint-Now-Hover.svg";
+import twitter from "../assets/buttons/twitter-button.svg";
+import discord from "../assets/buttons/Discord Button.svg";
+import mint from "../assets/buttons/Mint-Now-Button.svg";
+import mintHover from "../assets/buttons/Mint-Now-Hover.svg";
 import "../assets/styles/header.css";
 
 import { useState } from "react";
