@@ -1,7 +1,7 @@
 export const faqData = [
   {
     "title": "How can I buy a GLITCHPOP NFT?",
-    "content": "Mint it stupid cuck."
+    "content": "Mint on site or on contract! If sold out, check out the secondary markets!"
   },
   {
     "title": "What is the total supply?",
@@ -13,6 +13,6 @@ export const faqData = [
   },
   {
     "title": "Will there be a pre-sale?",
-    "content": "No you retard."
+    "content": "There will be no pre-sale!."
   }
 ]
