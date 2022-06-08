@@ -116,18 +116,19 @@
   border: none;
 }
 
-.faq-container p {
+.faq-question-item {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-question-item div {
   padding-top: 36px;
   padding-bottom: 36px;
 }
 
-.faq-question-container {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-}
-
-.faq-question-container button {
+.faq-question-item button {
   background: none;
   color: rgba(0, 211, 255, 1);
   font-family: "Graphie";
@@ -135,7 +136,12 @@
   font-weight: 600;
   line-height: 46px;
   letter-spacing: 0px;
-  cursor: pointer;
+}
+
+.more-q {
+  margin-top: 38px;
+  margin-bottom: 183px;
+  line-height: 2;
 }
 
 .more-q span {

@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./views/AboutUs";
 import RoadMap from "./views/RoadMap";
 import WhoAreWe from "./views/WhoAreWe";
-import FAQ from "./views/FAQ";
+import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
 
 const App = () => {
