@@ -1,52 +1,11 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #F2F2F2;
-    background-color: #000;
-}
-
-header {
-    background-image: url("../images/banner.svg");
-    background-repeat: no-repeat;
-    background-position: absolute;
-    background-size: cover;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: 
-        ". . . socials"
-        "avatar avatar logo ."
-        "avatar avatar logo ."
-        "avatar avatar mint ."
-        "avatar avatar . .";
-}
-
-.avatar {
-    grid-area: avatar;
-}
-
-.logo {
-    grid-area: logo;
-    margin-top: 74px;
-}
-
-.socials {
-    grid-area: socials;
-    padding-top: 34px;
-}
-
-.socials img {
-    margin-right: 16px;
-}
-
-.mint {
-    grid-area: mint;
-    width: 146px;
-    height: 58px;
-    margin-top: 63.95px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #f2f2f2;
+  background-color: #000;
 }

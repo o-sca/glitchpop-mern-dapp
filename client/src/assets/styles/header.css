@@ -1,0 +1,49 @@
+header {
+  background-image: url("../images/banner.svg");
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    ". . . ."
+    "avatar avatar container ."
+    "avatar avatar mint ."
+    "avatar avatar . .";
+}
+
+.avatar {
+  grid-area: avatar;
+}
+
+.container {
+  grid-area: container;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". socials"
+    "logo logo";
+}
+
+.logo {
+  grid-area: logo;
+  margin-top: 74px;
+}
+
+.socials {
+  grid-area: socials;
+  padding-top: 34px;
+}
+
+.socials img {
+  margin-right: 16px;
+}
+
+.mint {
+  grid-area: mint;
+  width: 146px;
+  height: 58px;
+  margin-top: 63.95px;
+}

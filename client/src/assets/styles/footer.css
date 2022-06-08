@@ -1,0 +1,31 @@
+footer {
+  height: 308px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 0, 123, 0.3488);
+  padding: 62px 244px 62px 244px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+    "footer-logo . . footer-socials"
+    "links . . ."
+    "cr . . .";
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+}
+
+.links {
+  grid-area: links;
+}
+
+.cr {
+  grid-area: cr;
+}
+
+.footer-socials {
+  grid-area: footer-socials;
+}
