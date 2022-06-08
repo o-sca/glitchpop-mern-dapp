@@ -1,5 +1,5 @@
-import aboutUsImg from "../assets/images/genesis-art.svg";
-import aboutUsHeader from "../assets/headers/About-Header.svg";
+import aboutUsImg from "../../assets/images/genesis-art.svg";
+import aboutUsHeader from "../../assets/headers/About-Header.svg";
 
 const AboutUs = () => {
   return (

@@ -1,4 +1,4 @@
-import roadmapHeader from "../assets/headers/Roadmap-Header.svg";
+import roadmapHeader from "../../assets/headers/Roadmap-Header.svg";
 
 const RoadMap = () => {
   return (
