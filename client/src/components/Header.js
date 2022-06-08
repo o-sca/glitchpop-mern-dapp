@@ -20,6 +20,11 @@ const Header = () => {
     setHover(false);
   };
 
+  function handleMintBtn(e) {
+    e.preventDefault();
+    window.location.href="/mint";
+  }
+
   return (
     <header>
       <img src={avatar} alt="avatar" className="avatar" />
@@ -30,7 +35,7 @@ const Header = () => {
         </div>
         <img src={logo} alt="logo" className="logo" />
       </div>
-      <button className="mint" onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
+      <button className="mint" onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={handleMintBtn}>
         { hover ? <img src={mintHover} alt="mint"/> : <img src={mint} alt="mint"/> }
       </button>
     </header>
