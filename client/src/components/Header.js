@@ -3,9 +3,22 @@ import logo from "../assets/images/logo.svg";
 import twitter from "../assets/images/twitter-button.svg";
 import discord from "../assets/images/Discord Button.svg";
 import mint from "../assets/images/Mint-Now-Button.svg";
+import mintHover from "../assets/images/Mint-Now-Hover.svg";
 import "../assets/styles/header.css";
 
+import { useState } from "react";
+
 const Header = () => {
+  const [hover, setHover] = useState([]);
+
+  function handleMouseIn() {
+    setHover(true);
+	};
+
+  function handleMouseOut() {
+    setHover(false);
+  };
+
   return (
     <header>
       <img src={avatar} alt="avatar" className="avatar" />
@@ -16,8 +29,8 @@ const Header = () => {
         </div>
         <img src={logo} alt="logo" className="logo" />
       </div>
-      <button className="mint">
-        <img src={mint} alt="mint" />
+      <button className="mint" onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
+        { hover ? <img src={mintHover} alt="mint"/> : <img src={mint} alt="mint"/> }
       </button>
     </header>
   );
