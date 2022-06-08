@@ -98,3 +98,47 @@
   margin-top: 27px;
   width: 90%;
 }
+
+.faq-container {
+  margin-top: 173px;
+  font-family: "Graphie";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.faq-container img {
+  margin-bottom: 53px;
+}
+
+.faq-container hr {
+  background-color: rgba(0, 211, 255, 1);
+  height: 2px;
+  border: none;
+}
+
+.faq-container p {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.faq-question-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.faq-question-container button {
+  background: none;
+  color: rgba(0, 211, 255, 1);
+  font-family: "Graphie";
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 46px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.more-q span {
+  color: #00D3FF;
+  cursor: pointer;
+}

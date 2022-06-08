@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./views/AboutUs";
 import RoadMap from "./views/RoadMap";
 import WhoAreWe from "./views/WhoAreWe";
+import FAQ from "./views/FAQ";
 import "./assets/styles/main.css";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <AboutUs />
       <RoadMap />
       <WhoAreWe />
+      <FAQ />
     </main>
     <Footer />
     </>
