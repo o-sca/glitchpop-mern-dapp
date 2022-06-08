@@ -10,8 +10,6 @@ const morgan = require('morgan');
 const { mainPageRouter } = require('./routes/main.js');
 const { apiRouter } = require('./routes/api.js');
 
-const root = path.join(__dirname, '..', 'public');
-
 exports.ExpressInstance = async () => {
     const app = express();
 
@@ -25,19 +23,12 @@ exports.ExpressInstance = async () => {
         app.use(cors());
         app.use(morgan('combined'));
         app.use(express.json());
-        app.use(express.static(root));
         app.use(session({
             secret: process.env.SECRET,
             resave: false,
             saveUninitialized: true
             }),
         );
-        
-        app.set('view engine', 'ejs');
-        app.set('views', root);
-        
-        app.use('/', mainPageRouter());
-        app.use('/api/', apiRouter());
         
         return app;
     } catch(e) {

@@ -1,6 +1,6 @@
 const http = require('http');
 
-const { ExpressInstance } = require('./src/server.js');
+const { ExpressInstance } = require('./server.js');
 
 
 (async () => {
