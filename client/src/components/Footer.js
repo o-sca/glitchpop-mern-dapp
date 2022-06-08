@@ -9,7 +9,10 @@ const Footer = () => {
 			<img src={logo} alt="footer-logo" className="footer-logo"/>
 			<div className="links">
 					<ul>
-						<button>About</button>
+						<li><a href="/">About Us</a></li>
+						<li><a href="/">Roadmap</a></li>
+						<li><a href="/">Who Are We</a></li>
+						<li><a href="/">FAQs</a></li>
 					</ul>
 			</div>
 			<p className="cr">Copyright 2022© Glitchpop All Rights Reserved</p>

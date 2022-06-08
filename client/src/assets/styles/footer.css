@@ -10,7 +10,7 @@ footer {
   grid-template-rows: auto auto auto;
   grid-template-areas: 
     "footer-logo . . footer-socials"
-    "links . . ."
+    "links links . ."
     "cr . . .";
 }
 
@@ -22,10 +22,25 @@ footer {
   grid-area: links;
 }
 
+.links ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 96px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
 .cr {
   grid-area: cr;
 }
 
 .footer-socials {
   grid-area: footer-socials;
+}
+
+.footer-socials img {
+  margin-right: 16px;
 }
