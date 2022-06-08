@@ -1,9 +1,9 @@
-import avatar from "../../assets/images/avatar.svg";
-import logo from "../../assets/images/logo.svg";
-import twitter from "../../assets/images/twitter-button.svg";
-import discord from "../../assets/images/Discord Button.svg";
-import mint from "../../assets/images/Mint-Now-Button.svg";
-import "../../assets/styles/header.css";
+import avatar from "../assets/images/avatar.svg";
+import logo from "../assets/images/logo.svg";
+import twitter from "../assets/images/twitter-button.svg";
+import discord from "../assets/images/Discord Button.svg";
+import mint from "../assets/images/Mint-Now-Button.svg";
+import "../assets/styles/header.css";
 
 const Header = () => {
   return (

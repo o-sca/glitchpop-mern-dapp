@@ -1,7 +1,7 @@
-import twitter from "../../assets/images/twitter-button.svg";
-import discord from "../../assets/images/Discord Button.svg";
-import logo from "../../assets/images/footer-logo.svg";
-import "../../assets/styles/footer.css";
+import twitter from "../assets/images/twitter-button.svg";
+import discord from "../assets/images/Discord Button.svg";
+import logo from "../assets/images/footer-logo.svg";
+import "../assets/styles/footer.css";
 
 const Footer = () => {
 	return ( 

@@ -1,7 +1,7 @@
 footer {
   height: 308px;
   width: 100%;
-  position: absolute;
+  margin-top: auto;
   bottom: 0;
   background-color: rgba(255, 0, 123, 0.3488);
   padding: 62px 244px 62px 244px;

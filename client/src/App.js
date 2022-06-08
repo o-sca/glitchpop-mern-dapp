@@ -1,17 +1,17 @@
-import Header from "./layouts/header/index";
-import Footer from "./layouts/footer/index";
-import Main from "./components/Main";
+import React, { Component } from "react";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Main from "./views/Main";
 
-const App = () => {
-  return (
-    <>
-    <Header />
-    <main>
+
+export default class App extends Component {
+  render() {
+    return (
+      <>
+      <Header />
       <Main />
-    </main>
-    <Footer />
-    </>
-  );
+      <Footer />
+      </>
+    )
+  }
 };
- 
-export default App;

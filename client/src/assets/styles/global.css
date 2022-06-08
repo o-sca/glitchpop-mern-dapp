@@ -9,3 +9,10 @@ body {
   color: #f2f2f2;
   background-color: #000;
 }
+
+#root {
+  display: grid;
+  grid-template-rows: 1fr 80px;
+  min-height: 100vh;
+  position: relative;
+}
