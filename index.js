@@ -1,10 +1,10 @@
 const http = require('http');
 
-const { App } = require('./src/app.js');
+const { ExpressInstance } = require('./src/server.js');
 
 
 (async () => {
-    const server = http.createServer(await App());
+    const server = http.createServer(await ExpressInstance());
     const address = process.env.SERVER_ADDRESS;
     const port = process.env.SERVER_PORT;
 

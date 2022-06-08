@@ -12,11 +12,15 @@ const { apiRouter } = require('./routes/api.js');
 
 const root = path.join(__dirname, '..', 'public');
 
-exports.App = async () => {
+exports.ExpressInstance = async () => {
     const app = express();
 
     try {
-        mongoose.https://github.com/o-scarzhu/dApp.git
+        await mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true 
+        });
+        console.log("Mongo DB Connected");
 
         app.use(cors());
         app.use(morgan('combined'));
