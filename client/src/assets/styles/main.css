@@ -1,15 +1,8 @@
-main {
-  display: flex;
-  flex-direction: column;
-  padding-left: 242px;
-  padding-right: 245px;
-}
-
 .about-us {
   display: flex;
-  flex-direction: row;
-  margin: auto;
-  font-family: "Graphie";
+  flex-flow: row;
+  justify-content: space-between;
+  margin-top: 140px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
@@ -25,17 +18,83 @@ main {
   margin-bottom: 31px;
 }
 
-@font-face {
+.about-us > .right img {
+  width: 46.4rem;
+}
+
+.roadmap {
+  margin-top: 161px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 31px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.who-are-we {
+  margin-top: 77px;
+}
+
+.chuchudrew-container {
+  display: flex;
+  flex-flow: row;
+  column-gap: 67px;
+  row-gap: 9px;
+  margin-top: 50px;
+}
+
+.chuchu-info {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+}
+
+.chuchu-info h2 {
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  font-size: 95.62px;
+  color: rgba(255, 0, 123, 1);
+}
+
+.chuchu-info p {
   font-family: "Graphie";
-  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
-  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.svg#Graphie")
-      format("svg");
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(246, 246, 246, 1);
+}
+
+.other-founders-container {
+  margin-top: 99px;
+  display: flex;
+  flex-flow: row;
+  row-gap: 22px;
+  justify-content: space-between;
+}
+
+.founders-info-container img {
+  width: 90%;
+}
+
+.founders-info-container > .name {
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.founders-info-container > .position {
+  font-family: "Graphie";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.founders-info-container > .description {
+  font-family: "Graphie";
+  font-weight: 400;
+  font-size: 16;
+  line-height: 1.5;
+  margin-top: 27px;
+  width: 90%;
 }

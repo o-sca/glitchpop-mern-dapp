@@ -4,8 +4,15 @@
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 242px;
+  padding-right: 245px;
+}
+
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Graphie";
   color: #f2f2f2;
   background-color: #000;
 }
@@ -15,4 +22,34 @@ body {
   grid-template-rows: auto;
   min-height: 100vh;
   position: relative;
+}
+
+@font-face {
+  font-family: "Graphie";
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.svg#Graphie")
+      format("svg");
+}
+
+@font-face {
+  font-family: "DharmaGothicEW01-Bold";
+  src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot");
+  src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.svg#DharmaGothicEW01-Bold")
+      format("svg");
 }

@@ -17,7 +17,7 @@ const Footer = () => {
 						<li><a href="/">FAQs</a></li>
 					</ul>
 			</div>
-			<p className="cr">Copyright 2022© Glitchpop All Rights Reserved</p>
+			<p className="cr">Copyright 2022 © Glitchpop All Rights Reserved</p>
 			<div className="footer-socials">
 					<img src={twitter} alt="twitter" onClick={twitterEvent} />
           <img src={discord} alt="discord" onClick={discordEvent} />
