@@ -9,7 +9,7 @@ export const faqData = [
   },
   {
     "title": "How much will it cost to mint a GLITCHPOP NFT?",
-    "content": "The cost to mint each GLITCHPOP NFT is 0.02 ETH."
+    "content": "The cost to mint each GLITCHPOP NFT is 0.01 ETH."
   },
   {
     "title": "Will there be a pre-sale?",

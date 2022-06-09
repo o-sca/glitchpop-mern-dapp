@@ -24,6 +24,12 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 600px) {
+  * {
+    width: auto;
+  }
+}
+
 @font-face {
   font-family: "Graphie";
   src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
