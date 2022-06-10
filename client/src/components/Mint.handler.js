@@ -25,6 +25,15 @@ export const checkWalletisConnected = async () => {
 
 export function mintEvent(currentAccount) {
   // + 1 is added into the selected index as it starts at 0
-  const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
+  // const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
   
+  fetchContract()
 };
+
+export async function fetchContract() {
+  const response = await fetch("/api/contract", {
+    method: "GET"
+  })
+  if (response.status !== 200) return false;
+  return await response.json();
+}

@@ -3,14 +3,17 @@ const { contractModel } = require("../models/contract.model");
 
 const NotFoundError = {
   status: false,
-  data: "data not found."
+  data: "Internal server error or data not found."
 }
 
-exports.fetchContract = (req, res) => {
-  return res.send({
-    abi: abi,
-    address: address[0],
-  });
+exports.fetchContract = async (req, res) => {
+  const [contractData] = await contractModel.find({});
+  if (!contractData) return res.status(500).json(NotFoundError);
+
+  return res.json({
+    address: contractData.address,
+    abi: JSON.parse(contractData.abi)
+  })
 };
 
 exports.fetchStatus = async (req, res) => {

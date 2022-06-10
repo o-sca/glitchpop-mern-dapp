@@ -13,6 +13,6 @@ const { ExpressInstance } = require('./server.js');
     
       console.log(`Server started on ${address}:${port}`);
   
-      return null;
+      return;
     });
   })();
