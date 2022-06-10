@@ -10,6 +10,7 @@ import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
 import { useState, useEffect } from "react";
+import { fetchContract, fetchStatus } from "./Contract.handler";
 import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
 import { 
   mintEvent, 
@@ -22,6 +23,10 @@ const Header = () => {
   const [currentAccount, setCurrentAccount] = useState({ 
     account: null, 
     signer: null 
+  });
+  const [contract, setContract] = useState({
+    address: null,
+    abi: null
   });
 
   function handleMouseIn() {
@@ -63,15 +68,18 @@ const Header = () => {
   };
 
   useEffect(() => {
-    return () => {
-      checkWalletisConnected().then(data => {
-        setCurrentAccount({ 
-          account: data.account, 
-          signer: data.signer 
-        })
-      }).catch(e => {
-        if (e.code === 4001) return; // UserRejectedRequest error
-        return console.log(e)
+    return async () => {
+      const contractData = await fetchContract();
+      setContract({
+        address: contractData.address,
+        abi: contractData.abi
+      })
+      
+      await fetchStatus();
+      const walletData = checkWalletisConnected();
+      setCurrentAccount({ 
+        account: walletData.account, 
+        signer: walletData.signer 
       })
     }
   }, [])

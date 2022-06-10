@@ -1,7 +1,7 @@
-import mocha from "../../assets/images/calvin.svg";
-import jo from "../../assets/images/joie.svg";
+import mocha from "../../assets/images/mocha.svg";
+import jo from "../../assets/images/jo.svg";
 import strongside from "../../assets/images/strongside.svg";
-import trupeach from "../../assets/images/trudy.svg";
+import trupeach from "../../assets/images/trud.svg";
 
 export const whoAreWeData = [
   {

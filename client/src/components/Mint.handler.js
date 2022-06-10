@@ -14,13 +14,25 @@ export function decrease(e) {
 
 export const checkWalletisConnected = async () => {
   if (!window.ethereum) return alert("No metamask extension detected!")
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
-  const accounts = await provider.send("eth_requestAccounts", []);
-  const signer = provider.getSigner();
-  return {
-    account: accounts[0],
-    signer: signer
+  try {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const accounts = await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    return {
+      account: accounts[0],
+      signer: signer
+    }
+  } catch (e) {
+    switch (e.code) {
+      case 4001:
+        console.log("User rejected signing")
+        break;
+      default:
+        console.log(e)
+        break;
+    }
   }
+  
 };
 
 export function mintEvent(currentAccount) {
