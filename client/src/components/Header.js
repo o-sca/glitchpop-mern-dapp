@@ -19,7 +19,10 @@ import {
 
 const Header = () => {
   const [hover, setHover] = useState(null);
-  const [currentAccount, setCurrentAccount] = useState({ account: null, signer: null });
+  const [currentAccount, setCurrentAccount] = useState({ 
+    account: null, 
+    signer: null 
+  });
 
   function handleMouseIn() {
     setHover(true);
@@ -31,8 +34,13 @@ const Header = () => {
 
   async function connectWalletHandler(e) {
     e.preventDefault();
+    if (currentAccount.account !== null 
+      && currentAccount.signer !== null) return;
     return checkWalletisConnected().then(data => {
-      setCurrentAccount({ account: data.account, signer: data.signer });
+      setCurrentAccount({ 
+        account: data.account, 
+        signer: data.signer 
+      })
     }).catch(e => {
       console.log(e);
     })
@@ -40,15 +48,30 @@ const Header = () => {
 
   function disconnectWalletHandler(e) {
     e.preventDefault();
-    setCurrentAccount({ account: null, signer: null });
-  }
+    if (currentAccount.account === null 
+      && currentAccount.signer === null) return;
+    setCurrentAccount({ 
+      account: null, 
+      signer: null 
+    })
+    return;
+  };
+
+  function mintEventHandler(e) {
+    e.preventDefault();
+    mintEvent(currentAccount)
+  };
 
   useEffect(() => {
     return () => {
       checkWalletisConnected().then(data => {
-        setCurrentAccount({ account: data.account, signer: data.signer });
+        setCurrentAccount({ 
+          account: data.account, 
+          signer: data.signer 
+        })
       }).catch(e => {
-        console.log(e);
+        if (e.code === 4001) return; // UserRejectedRequest error
+        return console.log(e)
       })
     }
   }, [])
@@ -58,9 +81,15 @@ const Header = () => {
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="container">
         <div className="socials">
-          <button><img src={opensea} alt="opensea" id="opensea" onClick={openseaEvent} /></button>
-          <button><img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} /></button>
-          <button><img src={discord} alt="discord" id="discord" onClick={discordEvent} /></button>
+          <button>
+            <img src={opensea} alt="opensea" id="opensea" onClick={openseaEvent} />
+          </button>
+          <button>
+            <img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} />
+          </button>
+          <button>
+            <img src={discord} alt="discord" id="discord" onClick={discordEvent} />
+          </button>
           <div className="connect-container">
             <button className="connect-btn" >{
               currentAccount.account !== null && currentAccount.signer !== null 
@@ -72,10 +101,12 @@ const Header = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="mint-container">
-        <button onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={mintEvent}>
+        <button onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={mintEventHandler}>
           { hover ? <img src={mintHover} alt="mint"/> : <img src={mint} alt="mint"/> }
         </button>
-        <button id="decrease" onClick={decrease}><img src={minus} alt="decrease" /></button>
+        <button id="decrease" onClick={decrease}>
+          <img src={minus} alt="decrease" />
+        </button>
         <div className="num-mints">
           <select name="mint-select" id="mint-select">
             <option value="1">1</option>
@@ -83,7 +114,9 @@ const Header = () => {
             <option value="3">3</option>
           </select>
         </div>
-        <button id="increase" onClick={increase}><img src={plus} alt="increase" /></button>
+        <button id="increase" onClick={increase}>
+          <img src={plus} alt="increase" />
+        </button>
       </div>
     </header>
   );

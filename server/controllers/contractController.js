@@ -1,5 +1,10 @@
-const express = require("express");
 const Web3 = require("web3");
+const { contractModel } = require("../models/contract.model");
+
+const NotFoundError = {
+  status: false,
+  data: "data not found."
+}
 
 exports.fetchContract = (req, res) => {
   return res.send({

@@ -5,7 +5,10 @@ const Accordion = ({ title, content }) => {
 
   return (
     <>
-    <div className="faq-question-item" onClick={ () => { setIsActive(!isActive) } }>
+    <div className="faq-question-item" onClick={
+      () => { 
+        setIsActive(!isActive) 
+          } }>
       <div>{title}</div>
       <button>{isActive ? '-' : '+'}</button>
     </div>

@@ -1,12 +1,5 @@
 import { ethers } from "ethers";
 
-export function mintEvent(e) {
-  e.preventDefault();
-  // + 1 is added into the selected index as it starts at 0
-  const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
-  console.log(numOfMints)
-};
-
 export function increase(e) {
   e.preventDefault();
   if (document.querySelector("#mint-select").selectedIndex === 2) return;
@@ -28,4 +21,10 @@ export const checkWalletisConnected = async () => {
     account: accounts[0],
     signer: signer
   }
+};
+
+export function mintEvent(currentAccount) {
+  // + 1 is added into the selected index as it starts at 0
+  const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
+  
 };
