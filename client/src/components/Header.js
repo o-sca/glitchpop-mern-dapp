@@ -69,6 +69,12 @@ const Header = () => {
 
   useEffect(() => {
     return async () => {
+      const walletData = checkWalletisConnected();
+      setCurrentAccount({ 
+        account: walletData.account, 
+        signer: walletData.signer 
+      })
+
       const contractData = await fetchContract();
       setContract({
         address: contractData.address,
@@ -76,11 +82,6 @@ const Header = () => {
       })
       
       await fetchStatus();
-      const walletData = checkWalletisConnected();
-      setCurrentAccount({ 
-        account: walletData.account, 
-        signer: walletData.signer 
-      })
     }
   }, [])
 
