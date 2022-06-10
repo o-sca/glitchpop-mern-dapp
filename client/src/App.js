@@ -11,7 +11,6 @@ import { checkWalletisConnected } from "./components/Mint.handler";
 import { useEffect } from "react";
 
 const App = () => {
-  
   useEffect(() => {
     return () => checkWalletisConnected();
   })

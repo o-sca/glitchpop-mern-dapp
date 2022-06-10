@@ -1,3 +1,5 @@
+import { ethers } from "ethers";
+
 export function mintEvent(e) {
   e.preventDefault();
   // + 1 is added into the selected index as it starts at 0
@@ -21,8 +23,10 @@ export const checkWalletisConnected = async () => {
   const { ethereum } = window;
 
   if (!ethereum) return alert("No metamask extension detected!")
-  const accounts = await ethereum.request({ method: "eth_accounts" });
-  console.log(accounts)
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  await provider.send("eth_requestAccounts", []);
+  const signer = provider.getSigner();
+  console.log(signer)
 }
 
 
