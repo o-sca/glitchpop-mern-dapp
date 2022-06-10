@@ -9,17 +9,16 @@ import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
 import { 
   mintEvent, 
   increase, 
   decrease, 
-  connectEvent, 
-  checkWalletisConnected } from "./Mint.handler";
+  connectEvent } from "./Mint.handler";
 
 const Header = () => {
-  const [hover, setHover] = useState([]);
+  const [hover, setHover] = useState(null);
   
   function handleMouseIn() {
     setHover(true);
@@ -28,10 +27,6 @@ const Header = () => {
   function handleMouseOut() {
     setHover(false);
   };
-
-  useEffect(() => {
-    return () => checkWalletisConnected();
-  })
 
   return (
     <header>

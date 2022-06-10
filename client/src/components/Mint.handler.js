@@ -21,12 +21,16 @@ export const checkWalletisConnected = async () => {
   const { ethereum } = window;
 
   if (!ethereum) return alert("No metamask extension detected!")
-  return console.log(1)
+  const accounts = await ethereum.request({ method: "eth_accounts" });
+  console.log(accounts)
 }
 
 
-export function connectEvent(e) {
+export async function connectEvent(e) {
   e.preventDefault();
+  const { ethereum } = window;
 
+  const accounts = await ethereum.request({ method: "eth_accounts" });
+  console.log(accounts)
 }
 
