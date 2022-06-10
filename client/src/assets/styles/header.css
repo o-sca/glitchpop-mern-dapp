@@ -24,10 +24,11 @@ header {
 .container {
   grid-area: container;
   display: grid;
+  width: 100%;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   grid-template-areas:
-    ". socials ."
+    ". socials socials"
     "logo logo .";
 }
 
@@ -39,6 +40,7 @@ header {
 .socials {
   grid-area: socials;
   padding-top: 34px;
+  display: flex;
 }
 
 .socials button {
@@ -61,6 +63,19 @@ header {
   cursor: pointer;
 }
 
+.connect-btn {
+  background-image: url("../buttons/Connect-Empty-Button.svg") !important;
+  background-repeat: no-repeat !important;
+  appearance: none;
+  height: 100%;
+  width: 138px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .mint-container {
   grid-area: mint;
   width: 146px;
@@ -77,6 +92,10 @@ header {
   cursor: pointer;
 }
 
+.mint-container button:hover {
+  transform: scale(1.1) perspective(1px);
+}
+
 .mint-container button:active {
   transform: translateY(2px);
   box-shadow: inset 1px;
@@ -89,9 +108,10 @@ header {
 
 select#mint-select {
   background-image: url("../buttons/Rectangle.svg");
+  background-repeat: no-repeat;
   appearance: none;
-  width: 66px;
-  height: 66px;
+  width: 65px;
+  height: 65px;
   text-align: center;
   font-size: 34px;
   font-family: "Graphie";
