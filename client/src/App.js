@@ -6,24 +6,20 @@ import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Header />
-          <main>
-            <AboutUs />
-            <RoadMap />
-            <WhoAreWe />
-            <FAQ />
-          </main>
-          <Footer />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Header />
+      <main>
+        <AboutUs />
+        <RoadMap />
+        <WhoAreWe />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
   );
 };
 
