@@ -16,3 +16,17 @@ export function decrease(e) {
   if (document.querySelector("#mint-select").selectedIndex === 0) return;
   document.querySelector("#mint-select").selectedIndex--;
 };
+
+export const checkWalletisConnected = async () => {
+  const { ethereum } = window;
+
+  if (!ethereum) return alert("No metamask extension detected!")
+  return console.log(1)
+}
+
+
+export function connectEvent(e) {
+  e.preventDefault();
+
+}
+

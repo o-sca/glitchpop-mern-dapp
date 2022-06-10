@@ -9,9 +9,14 @@ import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
-import { mintEvent, increase, decrease } from "./Mint.handler";
+import { 
+  mintEvent, 
+  increase, 
+  decrease, 
+  connectEvent, 
+  checkWalletisConnected } from "./Mint.handler";
 
 const Header = () => {
   const [hover, setHover] = useState([]);
@@ -24,6 +29,10 @@ const Header = () => {
     setHover(false);
   };
 
+  useEffect(() => {
+    return () => checkWalletisConnected();
+  })
+
   return (
     <header>
       <img src={avatar} alt="avatar" className="avatar" />
@@ -33,7 +42,7 @@ const Header = () => {
           <button><img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} /></button>
           <button><img src={discord} alt="discord" id="discord" onClick={discordEvent} /></button>
           <div className="connect-container">
-            <button className="connect-btn"><div id="connect-status">CONNECT</div></button>
+            <button className="connect-btn" onClick={connectEvent}><div id="connect-status">CONNECT</div></button>
           </div>
         </div>
         <img src={logo} alt="logo" className="logo" />
