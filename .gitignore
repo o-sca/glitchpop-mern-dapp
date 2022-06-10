@@ -23,3 +23,7 @@ config/default.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/%USERP~1
+server/config/default.json
+client/node_modules
+client/%USERP~1

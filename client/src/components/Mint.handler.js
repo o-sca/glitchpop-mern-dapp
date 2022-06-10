@@ -1,4 +1,5 @@
-import { ethers } from "ethers";
+import Web3 from 'web3';
+import { web3Modal } from "./Connect";
 
 export function increase(e) {
   e.preventDefault();
@@ -15,12 +16,13 @@ export function decrease(e) {
 export const checkWalletisConnected = async () => {
   if (!window.ethereum) return alert("No metamask extension detected!")
   try {
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const provider = await web3Modal.connect();
     const accounts = await provider.send("eth_requestAccounts", []);
     const signer = provider.getSigner();
     return {
       account: accounts[0],
-      signer: signer
+      signer: signer,
+      provider: provider,
     }
   } catch (e) {
     switch (e.code) {
@@ -32,10 +34,12 @@ export const checkWalletisConnected = async () => {
         break;
     }
   }
-  
 };
 
-export function mintEvent(currentAccount) {
+export async function mintEvent(account, contractData) {
   // + 1 is added into the selected index as it starts at 0
-  // const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
+  const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
+  let response = await fetch("/api/mint")
+  
+  
 };

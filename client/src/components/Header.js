@@ -12,6 +12,8 @@ import "../assets/styles/header.css";
 import { useState, useEffect } from "react";
 import { fetchContract, fetchStatus } from "./Contract.handler";
 import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
+
+
 import { 
   mintEvent, 
   increase, 
@@ -22,7 +24,8 @@ const Header = () => {
   const [hover, setHover] = useState(null);
   const [currentAccount, setCurrentAccount] = useState({ 
     account: null, 
-    signer: null 
+    signer: null ,
+    provider: null,
   });
   const [contract, setContract] = useState({
     address: null,
@@ -37,14 +40,13 @@ const Header = () => {
     setHover(false);
   };
 
-  async function connectWalletHandler(e) {
-    e.preventDefault();
-    if (currentAccount.account !== null 
-      && currentAccount.signer !== null) return;
+  async function connectWalletHandler() {
+    if (currentAccount.account !== null) return;
     return checkWalletisConnected().then(data => {
       setCurrentAccount({ 
         account: data.account, 
-        signer: data.signer 
+        signer: data.signer ,
+        provider: data.provider
       })
     }).catch(e => {
       console.log(e);
@@ -57,31 +59,30 @@ const Header = () => {
       && currentAccount.signer === null) return;
     setCurrentAccount({ 
       account: null, 
-      signer: null 
+      signer: null ,
+      provider: null
     })
     return;
   };
 
+  async function fetchContractHandler() {
+    const contractData = await fetchContract();
+    setContract({
+      address: contractData.address,
+      abi: contractData.abi
+    })
+  };
+
   function mintEventHandler(e) {
     e.preventDefault();
-    mintEvent(currentAccount)
+    mintEvent(currentAccount, contract)
   };
 
   useEffect(() => {
     return async () => {
-      const walletData = checkWalletisConnected();
-      setCurrentAccount({ 
-        account: walletData.account, 
-        signer: walletData.signer 
-      })
-
-      const contractData = await fetchContract();
-      setContract({
-        address: contractData.address,
-        abi: contractData.abi
-      })
-      
-      await fetchStatus();
+      await connectWalletHandler();
+      await fetchContractHandler();
+    
     }
   }, [])
 
@@ -101,7 +102,7 @@ const Header = () => {
           </button>
           <div className="connect-container">
             <button className="connect-btn" >{
-              currentAccount.account !== null && currentAccount.signer !== null 
+              currentAccount.account !== null
               ? <div onClick={disconnectWalletHandler}>Disconnect</div>
               : <div onClick={connectWalletHandler}>Connect</div>
             }</button>
@@ -110,8 +111,12 @@ const Header = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="mint-container">
-        <button onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={mintEventHandler}>
-          { hover ? <img src={mintHover} alt="mint"/> : <img src={mint} alt="mint"/> }
+        <button 
+          onMouseOver={handleMouseIn} 
+          onMouseOut={handleMouseOut} 
+          onClick={mintEventHandler}>{ hover 
+            ? <img src={mintHover} alt="mint"/> 
+            : <img src={mint} alt="mint"/> }
         </button>
         <button id="decrease" onClick={decrease}>
           <img src={minus} alt="decrease" />
