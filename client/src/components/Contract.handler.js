@@ -5,3 +5,7 @@ export async function fetchContract() {
   if (response.status !== 200) return false;
   return await response.json();
 }
+
+export async function fetchStatus() {
+  
+}
