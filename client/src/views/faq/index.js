@@ -5,7 +5,7 @@ import Accordion from "../../components/Accordion";
 
 const FAQ = () => {
   return (
-    <div className="faq-container">
+    <div className="faq-container" id="faq-container">
       <img src={faqHeader} alt="faq-header" />
       <hr />
       {faqData.map(({ title, content }) => {

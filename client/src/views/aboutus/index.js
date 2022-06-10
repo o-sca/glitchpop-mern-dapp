@@ -3,7 +3,7 @@ import aboutUsHeader from "../../assets/headers/About-Header.svg";
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us" id="about-us">
       <div className="left">
         <img src={aboutUsHeader} alt="about-us-header" />
         <p>

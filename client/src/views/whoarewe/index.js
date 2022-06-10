@@ -15,7 +15,7 @@ const WhoAreWe = () => {
   };
 
   return (
-    <div className="who-are-we">
+    <div className="who-are-we" id="who-are-we">
       <img src={whoAreWeHeader} alt="who-are-we-header" />
       <div className="chuchudrew-container">
         <img src={chuchudrewAvatar} alt="chuchudrew" />

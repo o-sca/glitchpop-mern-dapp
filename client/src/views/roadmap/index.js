@@ -2,7 +2,7 @@ import roadmapHeader from "../../assets/headers/Roadmap-Header.svg";
 
 const RoadMap = () => {
   return (
-    <div className="roadmap">
+    <div className="roadmap" id="roadmap">
       <img src={roadmapHeader} alt="roadmap-header" />
       <p>
         No roadmap, no crazy promises. We are enjoying and appreciating the current condition and state of the market and would like to as a team to provide a project with quality art and to build a foundation for showcasing our artist's unique skills and styles. 
