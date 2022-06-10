@@ -41,16 +41,61 @@ header {
   padding-top: 34px;
 }
 
+.socials button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all .12s ease-in-out;
+}
+
+.socials button:hover {
+  transform: scale(1.1) perspective(1px);
+}
+
+.socials button:active {
+  transform: translateY(2px);
+}
+
 .socials img {
   margin-right: 16px;
   cursor: pointer;
 }
 
-.mint {
+.mint-container {
   grid-area: mint;
   width: 146px;
   height: 58px;
   margin-top: 63.95px;
+  cursor: pointer;
+  display: flex;
+  column-gap: 33px;
+}
+
+.mint-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mint-container button:active {
+  transform: translateY(2px);
+  box-shadow: inset 1px;
+}
+
+.mint-edit-container {
+  display: flex;
+  margin-left: 33px;
+}
+
+select#mint-select {
+  background-image: url("../buttons/Rectangle.svg");
+  appearance: none;
+  width: 66px;
+  height: 66px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "Graphie";
+  font-weight: 700;
   cursor: pointer;
 }
 

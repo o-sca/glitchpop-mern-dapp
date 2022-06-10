@@ -1,30 +1,30 @@
-import calvinAvatar from "../../assets/images/calvin.svg";
-import joAvatar from "../../assets/images/joie.svg";
-import strongsideAvatar from "../../assets/images/strongside.svg";
-import trudyAvatar from "../../assets/images/trudy.svg";
+import mocha from "../../assets/images/calvin.svg";
+import jo from "../../assets/images/joie.svg";
+import strongside from "../../assets/images/strongside.svg";
+import trupeach from "../../assets/images/trudy.svg";
 
 export const whoAreWeData = [
   {
-    "avatar": calvinAvatar,
-    "name": "blah",
+    "avatar": mocha,
+    "name": "mocha",
     "position": "Founder",
     "bio": "Likes to degen."
   },
   {
-    "avatar": joAvatar,
+    "avatar": jo,
     "name": "jo",
     "position": "Marketing",
     "bio": "Likes to do marketing."
   },
   {
-    "avatar": strongsideAvatar,
+    "avatar": strongside,
     "name": "strongside",
     "position": "Full Stack Developer",
     "bio": "Likes to develop."
   },
   {
-    "avatar": trudyAvatar,
-    "name": "trudithpeach",
+    "avatar": trupeach,
+    "name": "trupeach",
     "position": "UI/UX/Graphics Designer",
     "bio": "Likes to design."
   }
