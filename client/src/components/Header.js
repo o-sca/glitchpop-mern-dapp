@@ -9,17 +9,18 @@ import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
 import { 
   mintEvent, 
   increase, 
-  decrease, 
-  connectEvent } from "./Mint.handler";
+  decrease,
+  checkWalletisConnected } from "./Mint.handler";
 
 const Header = () => {
   const [hover, setHover] = useState(null);
-  
+  const [currentAccount, setCurrentAccount] = useState({ account: null, signer: null });
+
   function handleMouseIn() {
     setHover(true);
 	};
@@ -27,6 +28,30 @@ const Header = () => {
   function handleMouseOut() {
     setHover(false);
   };
+
+  async function connectWalletHandler(e) {
+    e.preventDefault();
+    return checkWalletisConnected().then(data => {
+      setCurrentAccount({ account: data.account, signer: data.signer });
+    }).catch(e => {
+      console.log(e);
+    })
+  };
+
+  function disconnectWalletHandler(e) {
+    e.preventDefault();
+    setCurrentAccount({ account: null, signer: null });
+  }
+
+  useEffect(() => {
+    return () => {
+      checkWalletisConnected().then(data => {
+        setCurrentAccount({ account: data.account, signer: data.signer });
+      }).catch(e => {
+        console.log(e);
+      })
+    }
+  }, [])
 
   return (
     <header>
@@ -37,7 +62,11 @@ const Header = () => {
           <button><img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} /></button>
           <button><img src={discord} alt="discord" id="discord" onClick={discordEvent} /></button>
           <div className="connect-container">
-            <button className="connect-btn" onClick={connectEvent}><div id="connect-status">CONNECT</div></button>
+            <button className="connect-btn" >{
+              currentAccount.account !== null && currentAccount.signer !== null 
+              ? <div onClick={disconnectWalletHandler}>Disconnect</div>
+              : <div onClick={connectWalletHandler}>Connect</div>
+            }</button>
           </div>
         </div>
         <img src={logo} alt="logo" className="logo" />

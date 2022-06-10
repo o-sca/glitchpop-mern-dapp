@@ -7,14 +7,8 @@ import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
 
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { checkWalletisConnected } from "./components/Mint.handler";
-import { useEffect } from "react";
 
 const App = () => {
-  useEffect(() => {
-    return () => checkWalletisConnected();
-  })
-
   return (
     <>
       <Header />

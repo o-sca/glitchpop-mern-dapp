@@ -20,21 +20,12 @@ export function decrease(e) {
 };
 
 export const checkWalletisConnected = async () => {
-  const { ethereum } = window;
-
-  if (!ethereum) return alert("No metamask extension detected!")
+  if (!window.ethereum) return alert("No metamask extension detected!")
   const provider = new ethers.providers.Web3Provider(window.ethereum)
-  await provider.send("eth_requestAccounts", []);
+  const accounts = await provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
-  console.log(signer)
-}
-
-
-export async function connectEvent(e) {
-  e.preventDefault();
-  const { ethereum } = window;
-
-  const accounts = await ethereum.request({ method: "eth_accounts" });
-  console.log(accounts)
-}
-
+  return {
+    account: accounts[0],
+    signer: signer
+  }
+};
