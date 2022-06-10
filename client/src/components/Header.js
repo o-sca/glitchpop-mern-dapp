@@ -11,7 +11,8 @@ import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
 import { useState } from "react";
-import { twitterEvent, discordEvent } from "./Socials.handler";
+import { twitterEvent, discordEvent, openseaEvent } from "./Socials.handler";
+import { mintEvent } from "./Mint.handler";
 
 const Header = () => {
   const [hover, setHover] = useState([]);
@@ -24,17 +25,12 @@ const Header = () => {
     setHover(false);
   };
 
-  function handleMintBtn(e) {
-    e.preventDefault();
-    
-  }
-
   return (
     <header>
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="container">
         <div className="socials">
-          <button><img src={opensea} alt="opensea" id="opensea" /></button>
+          <button><img src={opensea} alt="opensea" id="opensea" onClick={openseaEvent} /></button>
           <button><img src={twitter} alt="twitter" id="twitter" onClick={twitterEvent} /></button>
           <button><img src={discord} alt="discord" id="discord" onClick={discordEvent} /></button>
           <button><img src={connect} alt="connect" /></button>
@@ -42,7 +38,7 @@ const Header = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="mint-container">
-        <button onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={handleMintBtn}>
+        <button onMouseOver={handleMouseIn} onMouseOut={handleMouseOut} onClick={mintEvent}>
           { hover ? <img src={mintHover} alt="mint"/> : <img src={mint} alt="mint"/> }
         </button>
         <button id="decrease"><img src={minus} alt="decrease" /></button>

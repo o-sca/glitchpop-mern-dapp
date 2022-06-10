@@ -7,3 +7,8 @@ export function twitterEvent(e) {
   e.preventDefault();
   window.location.href="https://twitter.com/P_GLITCHPOP";
 };
+
+export function openseaEvent(e) {
+  e.preventDefault();
+  window.location.href="https://opensea.io/glitchpop";
+};
