@@ -7,7 +7,6 @@ const express = require('express');
 const session = require('express-session');
 const morgan = require('morgan');
 
-const { mainPageRouter } = require('./routes/main.js');
 const { apiRouter } = require('./routes/api.js');
 
 exports.ExpressInstance = async () => {
