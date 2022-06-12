@@ -3,7 +3,7 @@ import discord from "../assets/buttons/Discord Button.svg";
 import logo from "../assets/images/footer-logo.svg";
 import "../assets/styles/footer.css";
 
-import { twitterEvent, discordEvent } from "./Socials.handler";
+import { twitterEvent, discordEvent } from "./buttons/Socials.handler";
 
 const Footer = () => {
 	return ( 

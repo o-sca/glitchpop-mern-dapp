@@ -5,10 +5,22 @@ import RoadMap from "./views/roadmap/";
 import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
+import "./assets/styles/header.css";
 
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { connect } from "./components/web3/Wallet.handler";
+
 
 const App = () => {
+  const [account, setAccount] = useState({
+    wallet: null,
+    provider: null
+  }) 
+  
+  useEffect(() => {
+    connect()
+  }, [])
+
   return (
     <>
       <Header />

@@ -1,6 +1,6 @@
 import faqHeader from "../../assets/headers/FAQ-Header.svg";
 import { faqData } from "./faq.content";
-import { discordEvent } from "../../components/Socials.handler";
+import { discordEvent } from "../../components/buttons/Socials.handler";
 import Accordion from "../../components/Accordion";
 
 const FAQ = () => {
