@@ -22,8 +22,9 @@ export async function connect() {
     });
   } catch (e) {
     console.error(e)
-    return false;
+    return;
   }
+  await fetchWallet();
   return toggleConnectButton();
 };
 
@@ -36,7 +37,7 @@ export async function disconnect() {
   web3Modal.clearCachedProvider();
   provider = null;
   selectedWallet = null;
-  return true;
+  return toggleConnectButton();
 };
 
 export async function fetchWallet() {

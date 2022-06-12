@@ -5,7 +5,6 @@ import RoadMap from "./views/roadmap/";
 import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
-import "./assets/styles/header.css";
 
 import { useState, useEffect } from "react";
 import { connect } from "./components/web3/Wallet.handler";
