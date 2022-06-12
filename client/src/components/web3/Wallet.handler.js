@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 import { web3Modal } from "./Web3Modal";
 import { toggleConnectButton } from "../buttons/ConnectButton.handler";
+import { fetchContract } from "../web3/Contract.handler";
 
 let web3;
 let provider;
@@ -34,9 +35,12 @@ export async function disconnect() {
     web3Modal.clearCachedProvider();
     provider = null;
   }
+
   web3Modal.clearCachedProvider();
   provider = null;
   selectedWallet = null;
+
+  console.log(fetchWalletInfo());
   return toggleConnectButton();
 };
 
@@ -48,14 +52,25 @@ export async function fetchWallet() {
     
     selectedWallet = wallets[0];
 
-    const balance = await web3.eth.getBalance(selectedWallet);
-    const ethBalance = parseFloat(web3.utils.fromWei(balance, "ether")).toFixed(4);
-    console.log(selectedWallet, ethBalance)
-  };
+    // const balance = await web3.eth.getBalance(selectedWallet);
+    // const ethBalance = parseFloat(web3.utils.fromWei(balance, "ether")).toFixed(4);
+    return;
+};
 
-export async function mintEvent(account, contractData) {
-  // + 1 is added into the selected index as it starts at 0
+export async function mintEvent() {
+  if (provider === null || provider === undefined || provider === "") return;
+  
+  const contractData = await fetchContract();
+  const contract = new web3.eth.Contract(contractData.abi, contractData.address);
+
+  const valueInWei = await contract.methods.cost().call();
   const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;  
+  const costToMint = valueInWei * numOfMints;
+
+  let tx = await contract.methods.mint(numOfMints).send({
+    from: selectedWallet,
+    value: costToMint
+  })
   
 };
 
