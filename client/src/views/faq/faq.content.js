@@ -13,6 +13,6 @@ export const faqData = [
   },
   {
     "title": "Will there be a pre-sale?",
-    "content": "There will be no pre-sale!."
+    "content": "There will be no pre-sale!"
   }
 ]
