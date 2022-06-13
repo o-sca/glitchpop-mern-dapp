@@ -1,0 +1,9 @@
+.roadmap {
+  margin-top: 161px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 31px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}

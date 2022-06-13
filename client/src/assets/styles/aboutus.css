@@ -1,0 +1,23 @@
+.about-us {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-top: 140px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about-us > .left {
+  padding-top: 50px;
+  width: 344px;
+  margin-right: 145px;
+}
+
+.about-us > .left img {
+  margin-bottom: 31px;
+}
+
+.about-us > .right img {
+  width: 46.4rem;
+}

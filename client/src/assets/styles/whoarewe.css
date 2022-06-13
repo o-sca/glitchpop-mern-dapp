@@ -1,0 +1,78 @@
+.who-are-we {
+  margin-top: 77px;
+}
+
+.chuchudrew-container {
+  display: flex;
+  flex-flow: row;
+  column-gap: 67px;
+  row-gap: 9px;
+  margin-top: 50px;
+}
+
+.chuchu-info {
+  display: flex;
+  flex-flow: column;
+  margin-top: 50px;
+}
+
+.chuchu-info h2 {
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  font-size: 95.62px;
+  color: rgba(255, 0, 123, 1);
+}
+
+.chuchu-info p {
+  font-family: "Graphie";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(246, 246, 246, 1);
+}
+
+.chu-socials {
+  margin-top: 28px;
+}
+
+.chu-socials button {
+  margin-right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.other-founders-container {
+  margin-top: 99px;
+  display: flex;
+  flex-flow: row;
+  row-gap: 22px;
+  column-gap: 22px;
+  justify-content: space-between;
+}
+
+.founders-info-container img {
+  width: 100%;
+}
+
+.founders-info-container > .name {
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.founders-info-container > .position {
+  font-family: "Graphie";
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.founders-info-container > .bio {
+  font-family: "Graphie";
+  font-weight: 400;
+  font-size: 16;
+  line-height: 1.5;
+  margin-top: 27px;
+}

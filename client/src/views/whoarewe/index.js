@@ -4,6 +4,7 @@ import igIcon from "../../assets/buttons/IG-Button.svg";
 import twitter from "../../assets/buttons/twitter-button.svg";
 import { whoAreWeData } from "./whoarewe.content";
 import { chuTwitter } from "../../components/buttons/Socials.handler";
+import "../../assets/styles/whoarewe.css";
 
 const WhoAreWe = () => {
   function createInfoItem(avatar, name, position, bio) {

@@ -2,6 +2,7 @@ import faqHeader from "../../assets/headers/FAQ-Header.svg";
 import { faqData } from "./faq.content";
 import { discordEvent } from "../../components/buttons/Socials.handler";
 import Accordion from "../../components/Accordion";
+import "../../assets/styles/faq.css";
 
 const FAQ = () => {
   return (

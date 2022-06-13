@@ -1,4 +1,5 @@
 import roadmapHeader from "../../assets/headers/Roadmap-Header.svg";
+import "../../assets/styles/roadmap.css";
 
 const RoadMap = () => {
   return (
