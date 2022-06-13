@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a51932b2.css",
+    "main.js": "/static/js/main.09bba2bf.js",
+    "static/media/banner.svg": "/static/media/banner.09578bb1ea160af1404a.svg",
+    "static/media/jo.svg": "/static/media/jo.72dc8b5463102306e54c124ef454721f.svg",
+    "static/media/strongside.svg": "/static/media/strongside.9e1c739aa775f2fc9d69f12c9e913962.svg",
+    "static/media/trud.svg": "/static/media/trud.96ad063158747a7a4f7ab4534e5e777d.svg",
+    "static/media/mocha.svg": "/static/media/mocha.4fe03c8ff0226ffbd9227aaa3d7c9641.svg",
+    "static/media/chuchudrew.svg": "/static/media/chuchudrew.84c0c108137c7c7f235aa5c46d0d6b15.svg",
+    "static/media/avatar.svg": "/static/media/avatar.a5388a8ab0c58eaaadd205b24bbb2a41.svg",
+    "static/media/genesis-art.svg": "/static/media/genesis-art.1cfabc049d0ec361d4eadeebae11a111.svg",
+    "static/media/logo.svg": "/static/media/logo.763366bc2386cb7f62387b51d2cfa53d.svg",
+    "static/media/footer-logo.svg": "/static/media/footer-logo.0c47ee8c77a874eb5e47c09c5db54a06.svg",
+    "static/media/OpenSea.svg": "/static/media/OpenSea.574d33d0f5cc004bfb38dfad1d956970.svg",
+    "static/media/IG-Button.svg": "/static/media/IG-Button.6bc812c5cd5a9496fd3acb4e9051552f.svg",
+    "static/media/Discord Button.svg": "/static/media/Discord Button.3ab3e5c76a8a436b2a0f24bb073759c4.svg",
+    "static/media/twitter-button.svg": "/static/media/twitter-button.f17f99cd654fa1b3658da5d11ae44562.svg",
+    "static/media/About-Header.svg": "/static/media/About-Header.5315959cd05a85c169995f2d789d8ba7.svg",
+    "static/media/FAQ-Header.svg": "/static/media/FAQ-Header.6cc65bd287e340e3183367da090afe0d.svg",
+    "static/media/Who-Are-We-Header.svg": "/static/media/Who-Are-We-Header.2504f2a9d87388e5938412fdd4e9d9c5.svg",
+    "index.html": "/index.html",
+    "static/media/Roadmap-Header.svg": "/static/media/Roadmap-Header.15d851a175c0d2d75ce6f2ac90429e51.svg",
+    "static/media/Mint-Now-Button.svg": "/static/media/Mint-Now-Button.5a903eed428c88294f8d.svg",
+    "static/media/plus.svg": "/static/media/plus.ce4c4e261ade23b15c927321d4266fdc.svg",
+    "static/media/minus.svg": "/static/media/minus.afa39b03dde9b0666f8efd9062e83dc3.svg",
+    "static/media/Connect-Empty-Button.svg": "/static/media/Connect-Empty-Button.3851b6e25d49bfc1e7ab.svg",
+    "static/media/Rectangle.svg": "/static/media/Rectangle.2b52c6314f1e480a9d68.svg",
+    "main.a51932b2.css.map": "/static/css/main.a51932b2.css.map",
+    "main.09bba2bf.js.map": "/static/js/main.09bba2bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a51932b2.css",
+    "static/js/main.09bba2bf.js"
+  ]
+}
