@@ -1,6 +1,7 @@
 import Web3 from 'web3';
 import { web3Modal } from "./Web3Modal";
 import { toggleConnectButton } from "../buttons/ConnectButton.handler";
+import { pendingStatus, successStatus, errorStatus } from "../buttons/MintButton.handler";
 import { fetchContract } from "../web3/Contract.handler";
 
 let web3;
@@ -59,6 +60,8 @@ export async function fetchWallet() {
 export async function mintEvent() {
   if (provider === null || provider === undefined || provider === "") return;
   
+  pendingStatus();
+
   const contractData = await fetchContract();
   const contract = new web3.eth.Contract(contractData.abi, contractData.address);
 
@@ -71,6 +74,8 @@ export async function mintEvent() {
     value: costToMint
   });
   
+  if (tx.status === false) return errorStatus();
+  else return successStatus();
 };
 
 export const fetchWalletInfo = () => {

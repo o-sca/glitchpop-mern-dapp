@@ -7,7 +7,7 @@ import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { increase, decrease } from "./web3/Select.handler";
 import { twitterEvent, discordEvent, openseaEvent } from "./buttons/Socials.handler";
 import { connect, disconnect, mintEvent } from "./web3/Wallet.handler";
@@ -70,7 +70,7 @@ const Header = () => {
             onMouseOver={handleMouseIn} 
             onMouseOut={handleMouseOut} 
             onClick={mintEvent}>
-            MINT NOW
+            <span id="mint-status">MINT NOW</span>
           </button>
         </div>
         <button id="decrease" onClick={decrease}>
