@@ -1,4 +1,5 @@
-const config = require("config");
+require("dotenv").config();
+// const config = require("config");
 const Web3 = require("web3");
 const { contractModel } = require("../models/contract.model");
 
@@ -26,9 +27,13 @@ exports.fetchContract = async (req, res) => {
 exports.fetchStatus = async (req, res) => {
   var web3;
 
-  config.get("production").toLowerCase() === "dev"
-  ? web3 = new Web3("ws://localhost:7545")
-  : web3 = new Web3(`https://mainnet.infura.io/v3/${config.get("infura")}`)
+  // config.get("production").toLowerCase() === "dev"
+  // ? web3 = new Web3("ws://localhost:7545")
+  // : web3 = new Web3(`https://mainnet.infura.io/v3/${config.get("infura")}`)
+
+  process.env.NODE_ENV === "production" 
+  ? web3 = new Web3(`https://mainnet.infura.io/v3/${config.get("infura")}`)
+  : web3 = new Web3("ws://localhost:7545")
 
   const contract = new web3.eth.Contract(abi, address);
   const status = await contract.methods.paused().call();
