@@ -21,3 +21,19 @@
 .about-us > .right img {
   width: 46.4rem;
 }
+
+@media screen and (max-width: 750px) {
+  .about-us {
+    flex-flow: row wrap;
+    row-gap: 25px;
+    width: 100%;
+  }
+
+  .about-us > .left {
+    width: 100%;
+  }
+
+  .about-us > .right img {
+    width: 100%;
+  }
+}

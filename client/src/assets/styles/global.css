@@ -25,138 +25,13 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-  
   body {
     width: 100%;
   }
-
-  header {
-    height: auto;
-    display: grid;
-    padding-left: 25px;
-    padding-right: 25px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "."
-      "container"
-      "mint"
-      "avatar";
-  }
-
-  .container {
-    grid-area: container;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: start;
-    align-content: start;   
-    grid-template-areas: 
-      "socials"
-      "logo"
-      "mint";
-  }
-
-  .socials {
-    width: 100%;
-  }
-
-  .logo {
-    width: 100%;
-  }
-
-  .avatar {
-    width: 100%;
-  }
-
-  .mint-container {
-    padding: 10px;
-    height: auto;
-    display: grid;
-    row-gap: 33px;
-    grid-template-areas: 
-      "mint-btn"
-      "mint-edit-items";
-  }
-
-  .mint-btn {
-    grid-area: mint-btn;
-  }
-
-  .mint-edit-items {
-    grid-area: mint-edit-items;
-    width: auto;
-  }
-
+  
   main {
     width: 100%;
     padding: 25px;
-  }
-
-  .about-us {
-    flex-flow: row wrap;
-    row-gap: 25px;
-    width: 100%;
-  }
-
-  .about-us > .left {
-    width: 100%;
-  }
-
-  .about-us > .right img {
-    width: 100%;
-  }
-
-  .chuchudrew-container {
-    flex-flow: row wrap;
-  }
-
-  .chuchudrew-container img {
-    width: 100%;
-  }
-
-  .chuchudrew-container h2 {
-    font-size: 62px;
-  }
-
-  .other-founders-container {
-    flex-flow: row wrap; 
-  }
-
-  .faq-container img {
-    width: 100%;
-  }
-
-  .faq-question-item button {
-    border: none;
-  }
-
-  footer {
-    padding: 34px;
-    row-gap: 25px;
-    height: auto;
-    width: 100%;
-    display: grid;
-    grid-template-areas: 
-      "footer-logo"
-      "footer-socials"
-      "links"
-      "cr";
-  }
-
-  .footer-socials {
-    margin-bottom: 50px;
-  }
-
-  .links {
-    width: 100%;
-  }
-
-  .links ul > li {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
   }
 }
 

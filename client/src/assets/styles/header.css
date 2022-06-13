@@ -147,3 +147,64 @@ select#mint-select {
   font-weight: 700;
   cursor: pointer;
 }
+
+@media screen and (max-width: 750px) {
+  header {
+    height: auto;
+    display: grid;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "."
+      "container"
+      "mint"
+      "avatar";
+  }
+
+  .container {
+    grid-area: container;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: start;
+    align-content: start;   
+    grid-template-areas: 
+      "socials"
+      "logo"
+      "mint";
+  }
+
+  .socials {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .avatar {
+    width: 100%;
+  }
+
+  .mint-container {
+    padding: 10px;
+    height: auto;
+    display: grid;
+    row-gap: 33px;
+    grid-template-areas: 
+      "mint-btn"
+      "mint-edit-items";
+  }
+
+  .mint-btn {
+    grid-area: mint-btn;
+  }
+
+  .mint-edit-items {
+    grid-area: mint-edit-items;
+    width: auto;
+  }
+}

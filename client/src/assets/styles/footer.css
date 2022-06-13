@@ -45,3 +45,32 @@ footer {
   margin-right: 16px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 34px;
+    row-gap: 25px;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+      "footer-logo"
+      "footer-socials"
+      "links"
+      "cr";
+  }
+
+  .footer-socials {
+    margin-bottom: 50px;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .links ul > li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}

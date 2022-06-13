@@ -49,3 +49,13 @@
   color: #00D3FF;
   cursor: pointer;
 }
+
+@media screen and (max-width: 750px) {
+  .faq-container img {
+    width: 100%;
+  }
+
+  .faq-question-item button {
+    border: none;
+  }
+}

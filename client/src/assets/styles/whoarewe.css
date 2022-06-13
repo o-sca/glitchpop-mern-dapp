@@ -76,3 +76,21 @@
   line-height: 1.5;
   margin-top: 27px;
 }
+
+@media screen and (max-width: 750px) {
+  .chuchudrew-container {
+    flex-flow: row wrap;
+  }
+
+  .chuchudrew-container img {
+    width: 100%;
+  }
+
+  .chuchudrew-container h2 {
+    font-size: 62px;
+  }
+
+  .other-founders-container {
+    flex-flow: row wrap; 
+  }
+}
