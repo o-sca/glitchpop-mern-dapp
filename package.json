@@ -6,7 +6,8 @@
   "scripts": {
     "client": "cd client && npm run start",
     "server": "cd server && node .",
-    "both": "npm run server & npm run client"
+    "both": "npm run server & npm run client",
+    "start": "node server/index.js"
   },
   "keywords": [],
   "author": "",
