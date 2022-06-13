@@ -6,18 +6,16 @@ import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
 import "./assets/styles/main.css";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { connect } from "./components/web3/Wallet.handler";
-
+import { fetchStatus, fetchContract } from "./components/web3/Contract.handler";
 
 const App = () => {
-  const [account, setAccount] = useState({
-    wallet: null,
-    provider: null
-  }) 
-  
   useEffect(() => {
     connect()
+    fetchContract().then(() => {
+      fetchStatus().then(status => {console.log(status)})
+    })
   }, [])
 
   return (

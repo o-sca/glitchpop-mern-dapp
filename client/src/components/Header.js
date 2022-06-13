@@ -3,13 +3,12 @@ import logo from "../assets/images/logo.svg";
 import twitter from "../assets/buttons/twitter-button.svg";
 import discord from "../assets/buttons/Discord Button.svg";
 import mint from "../assets/buttons/Mint-Now-Button.svg";
-import mintHover from "../assets/buttons/Mint-Now-Hover.svg";
 import opensea from "../assets/buttons/OpenSea.svg";
 import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
 import "../assets/styles/header.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { increase, decrease } from "./web3/Select.handler";
 import { twitterEvent, discordEvent, openseaEvent } from "./buttons/Socials.handler";
 import { connect, disconnect, mintEvent } from "./web3/Wallet.handler";
@@ -70,9 +69,8 @@ const Header = () => {
         <button 
           onMouseOver={handleMouseIn} 
           onMouseOut={handleMouseOut} 
-          onClick={mintEvent}>{ hover 
-            ? <img src={mintHover} alt="mint"/> 
-            : <img src={mint} alt="mint"/> }
+          onClick={mintEvent}>
+          <img src={mint} alt="mint"/>
         </button>
         <button id="decrease" onClick={decrease}>
           <img src={minus} alt="decrease" />

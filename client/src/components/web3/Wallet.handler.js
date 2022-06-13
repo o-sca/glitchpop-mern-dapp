@@ -17,7 +17,6 @@ export async function connect() {
   
     provider.on("chainChanged", async (chainId) => {
       // if (chainId !== "0x1") alert("Network must be on the mainnet to mint.");
-      console.log(chainId)
       window.location.reload();
       return fetchWallet();
     });
