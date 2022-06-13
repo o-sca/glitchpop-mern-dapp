@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 242px;
+  padding-right: 245px;
+}
+
+body {
+  font-family: "Graphie";
+  color: #f2f2f2;
+  background-color: #000;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  
+  body {
+    width: 100%;
+  }
+
+  header {
+    height: auto;
+    display: grid;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "."
+      "container"
+      "mint"
+      "avatar";
+  }
+
+  .container {
+    grid-area: container;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: start;
+    align-content: start;   
+    grid-template-areas: 
+      "socials"
+      "logo";
+  }
+
+  .socials {
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .avatar {
+    width: 100%;
+  }
+
+  .mint-container {
+    padding: 10px;
+    height: auto;
+    display: grid;
+    row-gap: 33px;
+    grid-template-areas: 
+      "mint-btn"
+      "mint-edit-items";
+  }
+
+  .mint-btn {
+    grid-area: mint-btn;
+  }
+
+  .mint-edit-items {
+    grid-area: mint-edit-items;
+    width: auto;
+  }
+
+  main {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .about-us {
+    flex-flow: row wrap;
+    row-gap: 25px;
+    width: 100%;
+  }
+
+  .about-us > .left {
+    width: 100%;
+  }
+
+  .about-us > .right img {
+    width: 100%;
+  }
+
+  .chuchudrew-container {
+    flex-flow: row wrap;
+  }
+
+  .chuchudrew-container img {
+    width: 100%;
+  }
+
+  .chuchudrew-container h2 {
+    font-size: 62px;
+  }
+
+  .other-founders-container {
+    flex-flow: row wrap; 
+  }
+
+  .faq-container img {
+    width: 100%;
+  }
+
+  .faq-question-item button {
+    border: none;
+  }
+
+  footer {
+    padding: 34px;
+    row-gap: 25px;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+      "footer-logo"
+      "footer-socials"
+      "links"
+      "cr";
+  }
+
+  .footer-socials {
+    margin-bottom: 50px;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .links ul > li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@font-face {
+  font-family: "Graphie";
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
+  src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.svg#Graphie")
+      format("svg");
+}
+
+@font-face {
+  font-family: "DharmaGothicEW01-Bold";
+  src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot");
+  src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.svg#DharmaGothicEW01-Bold")
+      format("svg");
+}

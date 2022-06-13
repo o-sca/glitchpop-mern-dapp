@@ -1,0 +1,47 @@
+footer {
+  height: 308px;
+  width: 100%;
+  margin-top: auto;
+  bottom: 0;
+  background-color: rgba(255, 0, 123, 0.3488);
+  padding: 62px 244px 62px 244px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+    "footer-logo . . footer-socials"
+    "links links . ."
+    "cr . . .";
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+}
+
+.links {
+  grid-area: links;
+}
+
+.links ul > li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 96px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.cr {
+  grid-area: cr;
+}
+
+.footer-socials {
+  grid-area: footer-socials;
+}
+
+.footer-socials img {
+  margin-right: 16px;
+  cursor: pointer;
+}

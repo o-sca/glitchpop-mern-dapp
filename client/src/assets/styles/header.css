@@ -1,0 +1,141 @@
+header {
+  background-image: url("../images/banner.svg");
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;
+  display: grid;
+  top: 0;
+  height: 700px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    ". . . ."
+    "avatar avatar container ."
+    "avatar avatar mint ."
+    "avatar avatar . .";
+}
+
+.avatar {
+  grid-area: avatar;
+  width: auto;
+}
+
+.container {
+  grid-area: container;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". socials"
+    "logo logo";
+}
+
+.logo {
+  grid-area: logo;
+  margin-top: 74px;
+  width: 100%;
+}
+
+.socials {
+  grid-area: socials;
+  padding-top: 34px;
+  display: flex;
+}
+
+.socials button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all .12s ease-in-out;
+}
+
+.socials button:hover {
+  transform: scale(1.1) perspective(1px);
+}
+
+.socials button:active {
+  transform: translateY(2px);
+}
+
+.socials img {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.connect-btn {
+  background-image: url("../buttons/Connect-Empty-Button.svg") !important;
+  background-repeat: no-repeat !important;
+  appearance: none;
+  height: 100%;
+  width: 138px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mint-container {
+  grid-area: mint;
+  width: 146px;
+  height: 58px;
+  margin-top: 63.95px;
+  cursor: pointer;
+  display: flex;
+  column-gap: 33px;
+}
+
+.mint-container button:not(.mint-btn) {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all .12s ease-in-out;
+}
+
+.mint-container button:hover:not(.mint-btn button) {
+  transform: scale(1.1) perspective(1px);
+}
+
+.mint-container button:active:not(.mint-btn button) {
+  transform: translateY(2px);
+  box-shadow: inset 1px;
+}
+
+.mint-btn {
+  background-image: url("../buttons/Mint-Now-Button.svg") !important;
+  background-repeat: no-repeat !important;
+  appearance: none;
+  transition: all .12s ease-in-out;
+}
+
+.mint-btn:hover { 
+  transform: scale(1.1) perspective(1px) !important;
+}
+
+.mint-btn button {
+  width: 146px;
+  height: 58px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mint-edit-items {
+  display: flex;
+  column-gap: 33px;
+}
+
+select#mint-select {
+  background-image: url("../buttons/Rectangle.svg");
+  background-repeat: no-repeat;
+  appearance: none;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "Graphie";
+  font-weight: 700;
+  cursor: pointer;
+}

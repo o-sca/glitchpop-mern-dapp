@@ -27,4 +27,3 @@ yarn-error.log*
 server/config/default.json
 client/node_modules
 client/%USERP~1
-client/
