@@ -33,6 +33,7 @@ header {
 .logo {
   grid-area: logo;
   margin-top: 74px;
+  width: 100%;
 }
 
 .socials {
@@ -100,11 +101,6 @@ header {
   box-shadow: inset 1px;
 }
 
-.mint-edit-container {
-  display: flex;
-  margin-left: 33px;
-}
-
 .mint-btn {
   background-image: url("../buttons/Mint-Now-Button.svg") !important;
   background-repeat: no-repeat !important;
@@ -126,6 +122,11 @@ header {
   cursor: pointer;
 }
 
+.mint-edit-items {
+  display: flex;
+  column-gap: 33px;
+}
+
 select#mint-select {
   background-image: url("../buttons/Rectangle.svg");
   background-repeat: no-repeat;
@@ -137,22 +138,4 @@ select#mint-select {
   font-family: "Graphie";
   font-weight: 700;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-  header {
-    max-width: 100%;
-    height: 669px;
-    background-size: contain;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-      "container container"
-      "avatar ."
-      "avatar socials";
-  }
-
-  .container {
-    width: 312.08px;
-  }
 }

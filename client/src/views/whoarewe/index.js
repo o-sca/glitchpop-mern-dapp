@@ -5,8 +5,8 @@ import { whoAreWeData } from "./whoarewe.content";
 const WhoAreWe = () => {
   function createInfoItem(avatar, name, position, bio) {
     return (
-      <div className="founders-info-container" key={avatar}>
-        <img src={avatar} alt={avatar}/>
+      <div className="founders-info-container" key={name}>
+        <img src={avatar} alt={name}/>
         <div className="name">{name}</div>
         <div className="position">{position}</div>
         <div className="bio">{bio}</div>

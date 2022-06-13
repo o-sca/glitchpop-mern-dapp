@@ -9,6 +9,10 @@ const Footer = () => {
 	return ( 
 		<footer>
 			<img src={logo} alt="footer-logo" className="footer-logo"/>
+			<div className="footer-socials">
+					<img src={twitter} alt="twitter" onClick={twitterEvent} />
+          <img src={discord} alt="discord" onClick={discordEvent} />
+			</div>
 			<div className="links">
 					<ul>
 						<li><a href="#about-us">About Us</a></li>
@@ -18,10 +22,6 @@ const Footer = () => {
 					</ul>
 			</div>
 			<p className="cr">Copyright 2022 © Glitchpop All Rights Reserved</p>
-			<div className="footer-socials">
-					<img src={twitter} alt="twitter" onClick={twitterEvent} />
-          <img src={discord} alt="discord" onClick={discordEvent} />
-			</div>
 		</footer>
 	);
 }
