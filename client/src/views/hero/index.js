@@ -1,7 +1,7 @@
 import avatar from "../../assets/images/avatar.svg";
 import logo from "../../assets/images/logo.svg";
-import Socials from "../../components/containers/Hero.Socials";
-import Mint from "../../components/containers/Hero.Mint";
+import { Mint } from "./Hero.Mint";
+import { Socials } from "./Hero.Socials";
 import "../../assets/styles/hero.css";
 
 const Hero = () => {

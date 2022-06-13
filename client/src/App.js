@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import NavBar from "./components/nav/NavBar";
 import Footer from "./components/Footer";
 import Hero from "./views/hero/";
 import AboutUs from "./views/aboutus/";
@@ -20,6 +20,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/">
+          <NavBar />
           <Hero />
           <main>
             <AboutUs />

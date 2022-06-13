@@ -1,11 +1,11 @@
 import plus from "../../assets/buttons/plus.svg";
 import minus from "../../assets/buttons/minus.svg";
 
-import { increase, decrease } from "../web3/Select.handler";
-import { mintEvent } from "../web3/Wallet.handler";
+import { increase, decrease } from "../../components/buttons";
+import { mintEvent } from "../../components/web3";
 import { useState } from "react";
 
-const Mint = () => {
+export const Mint = () => {
   const [hover, setHover] = useState(null);
 
   function handleMouseIn() {
@@ -45,5 +45,3 @@ const Mint = () => {
     </div>
   );
 };
-
-export default Mint;

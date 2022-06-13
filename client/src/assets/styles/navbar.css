@@ -1,0 +1,12 @@
+nav {
+  background-color: #F9E0EC;
+  height: 114px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav object {
+  width: 154.3px;
+  height: 62px;
+}

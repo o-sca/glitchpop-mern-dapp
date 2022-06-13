@@ -6,9 +6,9 @@ import {
   twitterEvent,
   discordEvent,
   openseaEvent,
-} from "../buttons/Socials.handler";
+} from "../../components/buttons";
 
-const Socials = () => {
+export const Socials = () => {
   return (
     <div className="socials">
       <button>
@@ -24,5 +24,3 @@ const Socials = () => {
     </div>
   );
 };
-
-export default Socials;
