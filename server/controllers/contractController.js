@@ -32,7 +32,7 @@ exports.fetchStatus = async (req, res) => {
   // : web3 = new Web3(`https://mainnet.infura.io/v3/${config.get("infura")}`)
 
   process.env.NODE_ENV === "production" 
-  ? web3 = new Web3(`https://mainnet.infura.io/v3/${config.get("infura")}`)
+  ? web3 = new Web3(`https://mainnet.infura.io/v3/${process.env.INFURA}`)
   : web3 = new Web3("ws://localhost:7545")
 
   const contract = new web3.eth.Contract(abi, address);
