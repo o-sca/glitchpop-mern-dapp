@@ -84,18 +84,18 @@ header {
   column-gap: 33px;
 }
 
-.mint-container button {
+.mint-container button:not(.mint-btn) {
   background: none;
   border: none;
   cursor: pointer;
   transition: all .12s ease-in-out;
 }
 
-.mint-container button:hover {
+.mint-container button:hover:not(.mint-btn button) {
   transform: scale(1.1) perspective(1px);
 }
 
-.mint-container button:active {
+.mint-container button:active:not(.mint-btn button) {
   transform: translateY(2px);
   box-shadow: inset 1px;
 }
@@ -103,6 +103,27 @@ header {
 .mint-edit-container {
   display: flex;
   margin-left: 33px;
+}
+
+.mint-btn {
+  background-image: url("../buttons/Mint-Now-Button.svg") !important;
+  background-repeat: no-repeat !important;
+  appearance: none;
+  transition: all .12s ease-in-out;
+}
+
+.mint-btn:hover { 
+  transform: scale(1.1) perspective(1px) !important;
+}
+
+.mint-btn button {
+  width: 146px;
+  height: 58px;
+  text-align: center;
+  font-size: 34px;
+  font-family: "DharmaGothicEW01-Bold";
+  font-weight: 700;
+  cursor: pointer;
 }
 
 select#mint-select {

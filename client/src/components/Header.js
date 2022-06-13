@@ -2,7 +2,6 @@ import avatar from "../assets/images/avatar.svg";
 import logo from "../assets/images/logo.svg";
 import twitter from "../assets/buttons/twitter-button.svg";
 import discord from "../assets/buttons/Discord Button.svg";
-import mint from "../assets/buttons/Mint-Now-Button.svg";
 import opensea from "../assets/buttons/OpenSea.svg";
 import plus from "../assets/buttons/plus.svg";
 import minus from "../assets/buttons/minus.svg";
@@ -66,12 +65,14 @@ const Header = () => {
         <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="mint-container">
-        <button 
-          onMouseOver={handleMouseIn} 
-          onMouseOut={handleMouseOut} 
-          onClick={mintEvent}>
-          <img src={mint} alt="mint"/>
-        </button>
+        <div className="mint-btn">
+          <button 
+            onMouseOver={handleMouseIn} 
+            onMouseOut={handleMouseOut} 
+            onClick={mintEvent}>
+            MINT NOW
+          </button>
+        </div>
         <button id="decrease" onClick={decrease}>
           <img src={minus} alt="decrease" />
         </button>

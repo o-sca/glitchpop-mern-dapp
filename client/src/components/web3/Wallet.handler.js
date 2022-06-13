@@ -69,7 +69,7 @@ export async function mintEvent() {
   let tx = await contract.methods.mint(numOfMints).send({
     from: selectedWallet,
     value: costToMint
-  })
+  });
   
 };
 

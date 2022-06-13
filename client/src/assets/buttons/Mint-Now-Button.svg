@@ -6,9 +6,6 @@
             <g id="Banner-Content" transform="translate(637.000000, 34.000000)">
                 <g id="Mint-Now-Button" transform="translate(6.000000, 514.000000)">
                     <rect id="Rectangle" stroke="#D627FF" stroke-width="4" fill="#F7E9FF" x="2" y="2" width="142" height="54"></rect>
-                    <text id="MINT-now" font-family="DharmaGothicE-Bold, Dharma Gothic E" font-size="34" font-weight="bold" fill="#2B00D0">
-                        <tspan x="26" y="40">MINT NOW</tspan>
-                    </text>
                 </g>
             </g>
         </g>
