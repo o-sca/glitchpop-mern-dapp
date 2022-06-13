@@ -14,6 +14,7 @@ _Glitchpop is a hand-drawn and generative art NFT collection. It is based on gir
 - Framework: ExpressJS
 - Framework: MongoDB
 - Framework: FireStore
+- Framework: Hardhat
 
 ## **Smart-Contract**
 
