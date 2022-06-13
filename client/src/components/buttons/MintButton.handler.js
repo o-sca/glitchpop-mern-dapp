@@ -9,3 +9,7 @@ export function successStatus() {
 export function errorStatus() {
   document.querySelector("#mint-status").innerHTML = "ERROR!";
 };
+
+export function resetStatus() {
+  document.querySelector("#mint-status").innerHTML = "MINT NOW";
+};

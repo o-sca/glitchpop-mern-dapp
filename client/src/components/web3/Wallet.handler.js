@@ -1,7 +1,7 @@
 import Web3 from 'web3';
 import { web3Modal } from "./Web3Modal";
 import { toggleConnectButton } from "../buttons/ConnectButton.handler";
-import { pendingStatus, successStatus, errorStatus } from "../buttons/MintButton.handler";
+import { pendingStatus, successStatus, errorStatus, resetStatus } from "../buttons/MintButton.handler";
 import { fetchContract } from "../web3/Contract.handler";
 
 let web3;
@@ -69,13 +69,18 @@ export async function mintEvent() {
   const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;  
   const costToMint = valueInWei * numOfMints;
 
-  let tx = await contract.methods.mint(numOfMints).send({
-    from: selectedWallet,
-    value: costToMint
-  });
+  try {
+    let tx = await contract.methods.mint(numOfMints).send({
+      from: selectedWallet,
+      value: costToMint
+    });
   
-  if (tx.status === false) return errorStatus();
-  else return successStatus();
+    if (tx.status === false) return errorStatus();
+    else return successStatus();
+  } catch (e) {
+    // console.log(e)
+    return resetStatus();
+  }
 };
 
 export const fetchWalletInfo = () => {
