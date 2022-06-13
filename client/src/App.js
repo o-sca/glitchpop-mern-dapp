@@ -4,26 +4,36 @@ import AboutUs from "./views/aboutus/";
 import RoadMap from "./views/roadmap/";
 import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
+import Page404 from "./views/404";
 
 import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "./components/web3/Wallet.handler";
 
 const App = () => {
   useEffect(() => {
-    connect()
-  }, [])
+    connect();
+  }, []);
 
   return (
-    <>
-      <Header />
-      <main>
-        <AboutUs />
-        <RoadMap />
-        <WhoAreWe />
-        <FAQ />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <main>
+            <AboutUs />
+            <RoadMap />
+            <WhoAreWe />
+            <FAQ />
+          </main>
+          <Footer />
+        </Route>
+        <Route exact path="/verify">
+          <h1>Verify</h1>
+        </Route>
+        <Route component={Page404}></Route>
+      </Switch>
+    </Router>
   );
 };
 
