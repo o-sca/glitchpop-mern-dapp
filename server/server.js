@@ -1,5 +1,5 @@
-require("dotenv").config();
-// const config = require("config");
+// require("dotenv").config();
+const config = require("config");
 const path = require("path");
 
 const mongoose = require("mongoose");
@@ -16,7 +16,7 @@ exports.ExpressInstance = async () => {
   const app = express();
 	
   try {
-    mongoose.connect(process.env.MONGO, {
+    mongoose.connect(config.get("mongo"), {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -28,11 +28,11 @@ exports.ExpressInstance = async () => {
     app.use(express.json());
     app.use(
       session({
-        secret: process.env.SECRET,
+        secret: process.env.NODE_ENV === "production" ? config.get("secret") : "blah",
         resave: false,
         saveUninitialized: true,
         store: MongoStore.create({
-          mongoUrl: process.env.MONGO,
+          mongoUrl: config.get("mongo"),
         }),
       })
     );
