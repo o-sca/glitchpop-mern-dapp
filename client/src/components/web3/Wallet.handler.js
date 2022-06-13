@@ -9,7 +9,7 @@ let provider;
 let selectedWallet;
 
 export async function connect() {
-  if (!window.ethereum) return alert("No metamask extension detected!")
+  if (!window.ethereum) return console.error("No metamask extension detected!");
   try {
     provider = await web3Modal.connect();
     provider.on("accountsChanged", async () => {
