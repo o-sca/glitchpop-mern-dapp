@@ -1,6 +1,9 @@
 import whoAreWeHeader from "../../assets/headers/Who-Are-We-Header.svg";
 import chuchudrewAvatar from "../../assets/images/chuchudrew.svg";
+import igIcon from "../../assets/buttons/IG-Button.svg";
+import twitter from "../../assets/buttons/twitter-button.svg";
 import { whoAreWeData } from "./whoarewe.content";
+import { chuTwitter } from "../../components/buttons/Socials.handler";
 
 const WhoAreWe = () => {
   function createInfoItem(avatar, name, position, bio) {
@@ -28,6 +31,14 @@ const WhoAreWe = () => {
             and all sorts of arts and crafts. We hope to highlight her art and 
             hope that you all will support her.
           </p>
+          <div className="chu-socials">
+            <button>
+              <img src={igIcon} alt="chu-ig" />
+            </button>
+            <button>
+              <img src={twitter} alt="chu-twitter" onClick={chuTwitter} />
+            </button>
+          </div>
         </div>
       </div>
       <div className="other-founders-container">

@@ -65,6 +65,17 @@
   color: rgba(246, 246, 246, 1);
 }
 
+.chu-socials {
+  margin-top: 28px;
+}
+
+.chu-socials button {
+  margin-right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .other-founders-container {
   margin-top: 99px;
   display: flex;

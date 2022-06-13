@@ -12,3 +12,13 @@ export function openseaEvent(e) {
   e.preventDefault();
   window.location.href="https://opensea.io/collection/project-glitchpop";
 };
+
+export function chuTwitter(e) {
+  e.preventDefault();
+  window.location.href="https://twitter.com/ChuChuDrew";
+};
+
+export function chuIG(e) {
+  e.preventDefault();
+  window.location.href="";
+}
