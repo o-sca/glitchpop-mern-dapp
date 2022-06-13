@@ -10,5 +10,5 @@ export function twitterEvent(e) {
 
 export function openseaEvent(e) {
   e.preventDefault();
-  window.location.href="https://opensea.io/glitchpop";
+  window.location.href="https://opensea.io/collection/project-glitchpop";
 };
