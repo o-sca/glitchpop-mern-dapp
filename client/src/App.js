@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Hero from "./views/hero/";
 import AboutUs from "./views/aboutus/";
 import RoadMap from "./views/roadmap/";
 import WhoAreWe from "./views/whoarewe/";
@@ -19,7 +20,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Header />
+          <Hero />
           <main>
             <AboutUs />
             <RoadMap />
