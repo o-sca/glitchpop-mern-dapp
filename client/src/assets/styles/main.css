@@ -81,7 +81,12 @@
   display: flex;
   flex-flow: row;
   row-gap: 22px;
+  column-gap: 22px;
   justify-content: space-between;
+}
+
+.founders-info-container img {
+  width: 100%;
 }
 
 .founders-info-container > .name {
@@ -143,6 +148,7 @@
   font-weight: 600;
   line-height: 46px;
   letter-spacing: 0px;
+  border: none;
 }
 
 .more-q {

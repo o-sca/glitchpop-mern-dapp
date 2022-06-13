@@ -51,42 +51,42 @@ const Header = () => {
                 id="disconnect" 
                 onClick={disconnect} 
                 style={disconnectStyle}>
-                Disconnect
+              <span>DISCONNECT</span>
               </div>
               <div 
                 id="connect" 
                 onClick={connect} 
                 style={connectStyle}>
-                Connect
+                <span>CONNECT</span>
               </div>
             </button>
           </div>
         </div>
         <img src={logo} alt="logo" className="logo" />
-      </div>
-      <div className="mint-container">
-        <div className="mint-btn">
-          <button 
-            onMouseOver={handleMouseIn} 
-            onMouseOut={handleMouseOut} 
-            onClick={mintEvent}>
-            <span id="mint-status">MINT NOW</span>
-          </button>
-        </div>
-        <div className="mint-edit-items">
-          <button id="decrease" onClick={decrease}>
-            <img src={minus} alt="decrease" />
-          </button>
-          <div className="num-mints">
-            <select name="mint-select" id="mint-select">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+        <div className="mint-container">
+          <div className="mint-btn">
+            <button 
+              onMouseOver={handleMouseIn} 
+              onMouseOut={handleMouseOut} 
+              onClick={mintEvent}>
+              <span id="mint-status">MINT NOW</span>
+            </button>
           </div>
-          <button id="increase" onClick={increase}>
-            <img src={plus} alt="increase" />
-          </button>
+          <div className="mint-edit-items">
+            <button id="decrease" onClick={decrease}>
+              <img src={minus} alt="decrease" />
+            </button>
+            <div className="num-mints">
+              <select name="mint-select" id="mint-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <button id="increase" onClick={increase}>
+              <img src={plus} alt="increase" />
+            </button>
+          </div>
         </div>
       </div>
     </header>
