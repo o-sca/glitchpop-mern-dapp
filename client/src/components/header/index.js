@@ -1,20 +1,20 @@
 import avatar from "../../assets/images/avatar.svg";
 import logo from "../../assets/images/logo.svg";
-import { Mint } from "./Hero.Mint";
-import { Socials } from "./Hero.Socials";
-import "../../assets/styles/hero.css";
+import { Mint } from "./Mint";
+import { Socials } from "./Socials";
+import "../../assets/styles/header.css";
 
-const Hero = () => {
+const Header = () => {
   return (
-    <div className="hero-container">
+    <header>
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="container">
         <Socials />
         <img src={logo} alt="logo" className="logo" />
         <Mint />
       </div>
-    </div>
+    </header>
   );
 };
 
-export default Hero;
+export default Header;

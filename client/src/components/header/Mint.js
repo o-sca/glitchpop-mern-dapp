@@ -1,8 +1,8 @@
 import plus from "../../assets/buttons/plus.svg";
 import minus from "../../assets/buttons/minus.svg";
 
-import { increase, decrease } from "../../components/buttons";
-import { mintEvent } from "../../components/web3";
+import { increase, decrease } from "../buttons";
+import { mintEvent } from "../web3";
 import { useState } from "react";
 
 export const Mint = () => {

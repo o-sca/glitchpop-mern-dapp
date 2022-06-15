@@ -1,4 +1,4 @@
-.hero-container {
+header {
   background-image: url("../images/banner.svg");
   background-repeat: no-repeat;
   background-position: absolute;
@@ -149,7 +149,7 @@ select#mint-select {
 }
 
 @media screen and (max-width: 750px) {
-  .hero-container {
+  header {
     height: auto;
     display: grid;
     padding-left: 25px;

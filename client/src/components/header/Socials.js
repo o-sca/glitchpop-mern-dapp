@@ -1,12 +1,12 @@
 import twitter from "../../assets/buttons/twitter-button.svg";
 import discord from "../../assets/buttons/Discord Button.svg";
 import opensea from "../../assets/buttons/OpenSea.svg";
-import Connect from "./Hero.Connect";
+import Connect from "./Connect";
 import {
   twitterEvent,
   discordEvent,
   openseaEvent,
-} from "../../components/buttons";
+} from "../buttons";
 
 export const Socials = () => {
   return (

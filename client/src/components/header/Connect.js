@@ -1,4 +1,4 @@
-import { connect, disconnect } from "../../components/web3";
+import { connect, disconnect } from "../web3";
 
 const Connect = () => {
   const connectStyle = {

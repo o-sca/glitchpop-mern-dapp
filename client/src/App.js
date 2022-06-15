@@ -1,6 +1,6 @@
 import NavBar from "./components/nav/NavBar";
 import Footer from "./components/Footer";
-import Hero from "./views/hero/";
+import Header from "./components/header";
 import AboutUs from "./views/aboutus/";
 import RoadMap from "./views/roadmap/";
 import WhoAreWe from "./views/whoarewe/";
@@ -21,7 +21,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <NavBar />
-          <Hero />
+          <Header />
           <main>
             <AboutUs />
             <RoadMap />
