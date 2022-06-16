@@ -1,7 +1,9 @@
+import MintButton from "./MintButton";
+import MintEdit from "./MintEdit";
+import ConnectButton from "./ConnectButton";
+import Socials from "./Socials";
 import avatar from "../../assets/images/avatar.svg";
 import logo from "../../assets/images/logo.svg";
-import { Mint } from "./Mint";
-import { Socials } from "./Socials";
 import "../../assets/styles/header.css";
 
 const Header = () => {
@@ -9,9 +11,15 @@ const Header = () => {
     <header>
       <img src={avatar} alt="avatar" className="avatar" />
       <div className="container">
-        <Socials />
+        <div className="socials">
+          <Socials />
+          <ConnectButton />
+        </div>
         <img src={logo} alt="logo" className="logo" />
-        <Mint />
+        <div className="mint-container">
+          <MintButton />
+          <MintEdit />
+        </div>
       </div>
     </header>
   );
