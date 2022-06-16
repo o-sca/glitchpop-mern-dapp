@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { mintEvent } from "../web3";
 
-export const MintNowButton = () => {
+const MintButton = () => {
   const [status, setStatus] = useState("MINT NOW");
 
   function mintEventHandler(e) {
@@ -27,3 +27,5 @@ export const MintNowButton = () => {
     </div>
   );
 };
+
+export default MintButton;

@@ -135,7 +135,7 @@ header {
   column-gap: 33px;
 }
 
-select#mint-select {
+.num-mints {
   background-image: url("../buttons/Rectangle.svg");
   background-repeat: no-repeat;
   appearance: none;

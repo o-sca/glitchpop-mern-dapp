@@ -66,7 +66,7 @@ export async function mintEvent() {
   );
 
   const valueInWei = await contract.methods.cost().call();
-  const numOfMints = document.querySelector("#mint-select").selectedIndex + 1;
+  const numOfMints = document.querySelector(".num-mints").selectedIndex + 1;
   const costToMint = valueInWei * numOfMints;
 
   try {
