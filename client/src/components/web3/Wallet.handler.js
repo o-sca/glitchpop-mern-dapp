@@ -1,7 +1,6 @@
 import Web3 from "web3";
 import { web3Modal } from "./Web3Modal";
 import { fetchContract } from "../web3/Contract.handler";
-import { toggleConnectButton } from "../buttons";
 
 let web3;
 let provider;
@@ -24,8 +23,7 @@ export async function connect() {
     console.error(e);
     return;
   }
-  await fetchWallet();
-  return toggleConnectButton();
+  return fetchWallet();
 }
 
 export async function disconnect() {
@@ -39,8 +37,8 @@ export async function disconnect() {
   provider = null;
   selectedWallet = null;
 
-  console.log(fetchWalletInfo());
-  return toggleConnectButton();
+  // console.log(fetchWalletInfo());
+  return true;
 }
 
 export async function fetchWallet() {
@@ -57,7 +55,7 @@ export async function fetchWallet() {
 }
 
 export async function mintEvent() {
-  if (provider === null || provider === undefined || provider === "") return;
+  if (provider === null || provider === undefined || provider === "") return false;
 
   const contractData = await fetchContract();
   const contract = new web3.eth.Contract(

@@ -1,7 +1,7 @@
 import twitter from "../../assets/buttons/twitter-button.svg";
 import discord from "../../assets/buttons/Discord Button.svg";
 import opensea from "../../assets/buttons/OpenSea.svg";
-import Connect from "./Connect";
+import ConnectButton from "./ConnectButton";
 import {
   twitterEvent,
   discordEvent,
@@ -20,7 +20,7 @@ export const Socials = () => {
       <button>
         <img src={discord} alt="discord" id="discord" onClick={discordEvent} />
       </button>
-      <Connect />
+      <ConnectButton />
     </div>
   );
 };

@@ -7,15 +7,10 @@ import WhoAreWe from "./views/whoarewe/";
 import FAQ from "./views/faq/";
 import Page404 from "./views/404";
 
-import { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { connect } from "./components/web3/Wallet.handler";
+
 
 const App = () => {
-  useEffect(() => {
-    connect();
-  }, []);
-
   return (
     <Router>
       <Switch>
