@@ -23,4 +23,5 @@ export const web3Modal = new Web3Modal({
   cacheProvider: false,
   providerOptions,
   disableInjectedProvider: false,
+  theme: "dark"
 });
