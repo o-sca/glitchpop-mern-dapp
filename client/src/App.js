@@ -1,4 +1,4 @@
-import NavBar from "./components/nav/NavBar";
+// import NavBar from "./components/nav/NavBar";
 import Footer from "./components/Footer";
 import Header from "./components/header";
 import AboutUs from "./views/aboutus/";
@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path="/">
-          <NavBar />
+          {/* <NavBar /> */}
           <Header />
           <main>
             <AboutUs />

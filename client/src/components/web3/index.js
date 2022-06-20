@@ -1,3 +1,3 @@
 export * from "./Web3Modal";
-export * from "./Wallet.handler";
+export * from "./Web3.Handler";
 export * from "./Contract.handler";

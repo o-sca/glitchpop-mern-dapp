@@ -1,6 +1,6 @@
 import Web3 from "web3";
 import { web3Modal } from "./Web3Modal";
-import { fetchContract } from "../web3/Contract.handler";
+import { fetchContract } from "./Contract.handler";
 
 let web3;
 let provider;
@@ -36,8 +36,6 @@ export async function disconnect() {
   web3Modal.clearCachedProvider();
   provider = null;
   selectedWallet = null;
-
-  // console.log(fetchWalletInfo());
   return true;
 }
 
@@ -51,7 +49,7 @@ export async function fetchWallet() {
 
   // const balance = await web3.eth.getBalance(selectedWallet);
   // const ethBalance = parseFloat(web3.utils.fromWei(balance, "ether")).toFixed(4);
-  return;
+  return true;
 }
 
 export async function mintEvent() {
