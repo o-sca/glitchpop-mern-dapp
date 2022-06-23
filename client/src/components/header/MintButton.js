@@ -8,23 +8,19 @@ const MintButton = () => {
     e.preventDefault();
     setStatus("PENDING...");
     mintEvent()
-      .then(res => {
+      .then((res) => {
         if (res === false) return setStatus("ERROR");
         else return setStatus("SUCCESS");
       })
-      .catch(e => {
+      .catch((e) => {
         return setStatus("ERROR");
-      })
-  };
+      });
+  }
 
   return (
-    <div className="mint-btn">
-      <button onClick={mintEventHandler}>
-        <span id="mint-status">
-          { status }
-        </span>
-      </button>
-    </div>
+    <button onClick={mintEventHandler} className="mint-btn">
+      <span id="mint-status">{status}</span>
+    </button>
   );
 };
 

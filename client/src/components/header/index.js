@@ -9,18 +9,14 @@ import "../../assets/styles/header.css";
 const Header = () => {
   return (
     <header>
-      <img src={avatar} alt="avatar" className="avatar" />
-      <div className="container">
-        <div className="socials">
-          <Socials />
-          <ConnectButton />
-        </div>
-        <img src={logo} alt="logo" className="logo" />
-        <div className="mint-container">
-          <MintButton />
-          <MintEdit />
-        </div>
-      </div>
+      <ConnectButton />
+      <img src={logo} alt="logo" className="logo" />
+      <MintButton />
+      <MintEdit />
+      
+        <img src={avatar} alt="avatar" className="avatar" />
+        <Socials />
+      
     </header>
   );
 };

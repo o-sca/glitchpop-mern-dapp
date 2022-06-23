@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 main {
@@ -24,17 +25,6 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 750px) {
-  body {
-    width: 100%;
-  }
-  
-  main {
-    width: 100%;
-    padding: 25px;
-  }
-}
-
 @font-face {
   font-family: "Graphie";
   src: url("//db.onlinewebfonts.com/t/a5b0e20f1b3c4884638d19a0b5d43074.eot");
@@ -51,7 +41,7 @@ body {
 }
 
 @font-face {
-  font-family: "DharmaGothicEW01-Bold";
+  font-family: "Dharma";
   src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot");
   src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot?#iefix")
       format("embedded-opentype"),

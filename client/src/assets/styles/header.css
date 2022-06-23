@@ -1,202 +1,127 @@
 header {
   background-image: url("../images/banner.svg");
   background-repeat: no-repeat;
-  background-position: absolute;
   background-size: cover;
+  background-position: center;
+  padding: 35px 25px 0px;
   display: grid;
-  top: 0;
-  height: auto;
-  width: 100%;
-  padding: 0px 25px 0px 25px;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    ". container container"
-    "avatar container container";
+  grid-template-rows: auto;
+  min-height: 100vh;
 }
 
-.avatar {
-  grid-area: avatar;
-  width: 100%;
-}
-
-.container {
-  grid-area: container;
-  display: grid;
-  width: 100%;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    ". socials"
-    "logo logo"
-    "mint .";
-  margin-bottom: 50px;
-}
-
-.logo {
-  grid-area: logo;
-  margin-top: 74px;
-  width: 100%;
-}
-
-.socials {
-  grid-area: socials;
-  padding-top: 34px;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-end;  
-  padding-right: 25px; 
-}
-
-.socials button {
-  background: none;
+header button {
+  background-image: url("../buttons/EmptyButton.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: all .12s ease-in-out;
   border: none;
+  max-width: 100%;
+  width: 146px;
+  height: 65px;
+  font-size: 34px;
+  font-family: "Dharma";
+  font-weight: 700;
   cursor: pointer;
   transition: all .12s ease-in-out;
 }
 
-.socials button:hover {
+header button:hover {
   transform: scale(1.1) perspective(1px);
 }
 
-.socials button:active {
+header button:active {
   transform: translateY(2px);
   outline: 0;
 }
 
-.socials img {
-  margin-right: 16px;
-  cursor: pointer;
-}
-
 .connect-btn {
-  background-image: url("../buttons/Connect-Empty-Button.svg") !important;
-  background-repeat: no-repeat !important;
-  appearance: none;
-  text-align: center;
-  height: 59px;
-  width: 139px;
-  font-size: 34px;
-  font-family: "DharmaGothicEW01-Bold";
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.mint-container {
-  grid-area: mint;
-  width: 146px;
-  height: 58px;
-  margin-top: 63.95px;
-  cursor: pointer;
-  display: flex;
-  column-gap: 33px;
-}
-
-.mint-container button:not(.mint-btn) {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: all .12s ease-in-out;
-}
-
-.mint-container button:hover:not(.mint-btn button) {
-  transform: scale(1.1) perspective(1px);
-}
-
-.mint-container button:active:not(.mint-btn button) {
-  transform: translateY(2px);
-  box-shadow: inset 1px;
+  margin-bottom: 30px;
 }
 
 .mint-btn {
-  background-image: url("../buttons/Mint-Now-Button.svg") !important;
-  background-repeat: no-repeat !important;
-  appearance: none;
-  transition: all .12s ease-in-out;
-}
-
-.mint-btn:hover { 
-  transform: scale(1.1) perspective(1px) !important;
-}
-
-.mint-btn button {
-  width: 146px;
-  height: 58px;
-  text-align: center;
-  font-size: 34px;
-  font-family: "DharmaGothicEW01-Bold";
-  font-weight: 700;
-  cursor: pointer;
+  margin-top: 35.99px;
 }
 
 .mint-edit-items {
+  margin-top: 22px;
   display: flex;
+  flex-direction: row;
   column-gap: 33px;
 }
 
-.num-mints {
+.mint-edit-items button {
+  background: none;
+  width: 65px;
+  height: 65px;
+}
+
+.mint-edit-items select {
   background-image: url("../buttons/Rectangle.svg");
   background-repeat: no-repeat;
   appearance: none;
   width: 65px;
   height: 65px;
-  text-align: center;
   font-size: 34px;
   font-family: "Graphie";
   font-weight: 700;
+  text-align-last: center;
   cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+.socials {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 21px;
+  margin-bottom: 32px;
+}
+
+.socials button {
+  width: 43px;
+  height: 43px;
+}
+
+.avatar {
+  margin-top: 30px;
+  margin-left: -50px;
+  margin-top: auto;
+  bottom: 0;
+}
+
+.mobile {
+  display: flex;
+}
+
+@media (min-width: 1400px) {
   header {
-    height: auto;
     display: grid;
-    padding-left: 25px;
-    padding-right: 25px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "."
-      "container"
-      "mint"
-      "avatar";
-  }
-
-  .container {
-    grid-area: container;
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: start;
-    align-content: start;   
-    grid-template-areas: 
-      "socials"
-      "logo"
-      "mint";
-  }
-
-  .socials {
-    width: 100%;
-  }
-
-  .logo {
-    width: 100%;
+    padding: 0px 25px;
+    grid-template-areas:
+    "avatar avatar socials connect"
+    "avatar avatar logo logo"
+    "avatar avatar mint-btn mint"
+    "avatar avatar mint-btn mint"
   }
 
   .avatar {
+    grid-area: avatar;
+    margin-left: 0;
     width: 100%;
   }
 
-  .mint-container {
-    padding: 10px;
-    height: auto;
-    display: grid;
-    row-gap: 33px;
-    grid-template-areas: 
-      "mint-btn"
-      "mint-edit-items";
+  .connect-btn {
+    grid-area: connect;
+  }
+
+  .socials {
+    grid-area: socials;
+    flex-direction: row-reverse;
+    column-gap: 15px;
+  }
+
+  .logo {
+    grid-area: logo;
   }
 
   .mint-btn {
@@ -204,7 +129,6 @@ header {
   }
 
   .mint-edit-items {
-    grid-area: mint-edit-items;
-    width: auto;
+    grid-area: mint;
   }
 }

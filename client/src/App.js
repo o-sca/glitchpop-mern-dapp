@@ -17,13 +17,13 @@ const App = () => {
         <Route exact path="/">
           {/* <NavBar /> */}
           <Header />
-          <main>
+          {/* <main>
             <AboutUs />
             <RoadMap />
             <WhoAreWe />
             <FAQ />
           </main>
-          <Footer />
+          <Footer /> */}
         </Route>
         <Route exact path="/verify">
           <h1>Verify</h1>

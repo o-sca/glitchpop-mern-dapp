@@ -8,23 +8,21 @@ const ConnectButton = () => {
     if (button === "CONNECT") {
       let res = await connect();
       if (res) {
-        setButton("DISCONNECT")
+        setButton("DISCONNECT");
       } else {
         await disconnect();
         setButton("CONNECT");
       }
     } else {
       await disconnect();
-      setButton("CONNECT")
+      setButton("CONNECT");
     }
   };
 
   return (
-    <div className="connect-container">
-      <button className="connect-btn" onClick={handleButtonState}>
-        {button}
-      </button>
-    </div>
+    <button className="connect-btn" onClick={handleButtonState}>
+      {button}
+    </button>
   );
 };
 
