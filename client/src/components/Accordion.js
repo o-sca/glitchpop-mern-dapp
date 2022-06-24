@@ -10,7 +10,7 @@ const Accordion = ({ title, content }) => {
         setIsActive(!isActive) 
           } }>
       <div>{title}</div>
-      <button>{isActive ? '-' : '+'}</button>
+      <span>{isActive ? '-' : '+'}</span>
     </div>
     {isActive && <div style={{marginBottom: "36px"}}>{content}</div>}
     <hr />

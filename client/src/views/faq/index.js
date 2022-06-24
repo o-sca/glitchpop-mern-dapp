@@ -7,7 +7,7 @@ import "../../assets/styles/faq.css";
 const FAQ = () => {
   return (
     <div className="faq-container" id="faq-container">
-      <object type="image/svg+xml" aria-label="header" data={faqHeader} alt="faq-header" />
+      <img src={faqHeader} alt="faq-header" />
       <hr />
       {faqData.map(({ title, content }) => {
         return <Accordion title={title} content={content} key={title} />;
