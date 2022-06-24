@@ -20,16 +20,11 @@ const WhoAreWe = () => {
 
   return (
     <div className="who-are-we" id="who-are-we">
-      <object
-        type="image/svg+xml"
-        data={whoAreWeHeader}
-        aria-label="header"
-        alt="who-are-we-header"
-      />
+      <img src={whoAreWeHeader} alt="who-are-we-header" />
       <div className="chuchudrew-container">
         <img src={chuchudrewAvatar} alt="chuchudrew" />
         <div className="chuchu-info">
-          <h2>@CHUCHUDREW</h2>
+          <h2 onClick={chuTwitter}>@CHUCHUDREW</h2>
           <p>
             We want our talent and beloved artist to be the centre spotlight of
             this project. Iris has been drawing for many years and this is her
@@ -38,12 +33,6 @@ const WhoAreWe = () => {
             to highlight her art and hope that you all will support her.
           </p>
           <div className="chu-socials">
-            <button>
-              <img src={igIcon} alt="chu-ig" />
-            </button>
-            <button>
-              <img src={twitter} alt="chu-twitter" onClick={chuTwitter} />
-            </button>
           </div>
         </div>
       </div>
