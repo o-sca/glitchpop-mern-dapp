@@ -8,8 +8,8 @@ const { ExpressInstance } = require('./server.js');
 
 (async () => {
     const server = http.createServer(await ExpressInstance());
-    const address = config.get("server.host");
-    const port = config.get("server.port");
+    const address = process.env.ADDRESS;
+    const port = process.env.PORT;
 
     server.listen(port, address, err => {
       if (err) return console.error(err);
