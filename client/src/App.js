@@ -22,8 +22,8 @@ const App = () => {
             <RoadMap />
             <WhoAreWe />
             <FAQ />
-          </main>
-          <Footer /> */}
+          </main> */}
+          <Footer />
         </Route>
         <Route exact path="/verify">
           <h1>Verify</h1>

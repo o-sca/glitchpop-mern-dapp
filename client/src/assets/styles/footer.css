@@ -1,25 +1,30 @@
 footer {
-  height: 308px;
+  height: auto;
   width: 100%;
   margin-top: auto;
   bottom: 0;
   background-color: rgba(255, 0, 123, 0.3488);
-  padding: 62px 244px 62px 244px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-    "footer-logo . . footer-socials"
-    "links links . ."
-    "cr . . .";
+  padding: 34px;
+  row-gap: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo {
-  grid-area: footer-logo;
+  width: 159px;
+  height: 63px;
+  margin-top: 47px;
 }
 
-.links {
-  grid-area: links;
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.footer-socials img {
+  width: 43px;
+  cursor: pointer;
 }
 
 .links ul > li {
@@ -31,46 +36,50 @@ footer {
 .links a {
   text-decoration: none;
   color: white;
+  font-family: "Dharma";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 1.125px;
+  text-align: left;
 }
 
-.cr {
-  grid-area: cr;
+footer p {
+  font-family: "Graphie";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
-.footer-socials {
-  grid-area: footer-socials;
-}
-
-.footer-socials img {
-  margin-right: 16px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 750px) {
+@media (min-width: 768px) {
   footer {
-    padding: 34px;
-    row-gap: 25px;
-    height: auto;
-    width: 100%;
     display: grid;
-    grid-template-areas: 
-      "footer-logo"
-      "footer-socials"
-      "links"
-      "cr";
+    grid-template-areas:
+      "footer-logo . . footer-socials"
+      "links links . ."
+      "cr . . .";
   }
 
-  .footer-socials {
-    margin-bottom: 50px;
+  .footer-logo {
+    grid-area: footer-logo;
   }
 
   .links {
-    width: 100%;
+    grid-area: links;
   }
 
-  .links ul > li {
-    margin-bottom: 20px;
+  .links ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .cr {
+    grid-area: cr;
+  }
+
+  .footer-socials {
+    grid-area: footer-socials;
   }
 }
