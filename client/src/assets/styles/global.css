@@ -8,8 +8,7 @@
 main {
   display: flex;
   flex-direction: column;
-  padding-left: 242px;
-  padding-right: 245px;
+  padding: 61px 30px;
 }
 
 body {
@@ -23,6 +22,13 @@ body {
   grid-template-rows: auto;
   min-height: 100vh;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 @font-face {
