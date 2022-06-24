@@ -1,7 +1,5 @@
 import whoAreWeHeader from "../../assets/headers/Who-Are-We-Header.svg";
 import chuchudrewAvatar from "../../assets/images/chuchudrew.svg";
-import igIcon from "../../assets/buttons/IG-Button.svg";
-import twitter from "../../assets/buttons/twitter-button.svg";
 import { whoAreWeData } from "./whoarewe.content";
 import { chuTwitter } from "../../components/buttons/Socials.handler";
 import "../../assets/styles/whoarewe.css";

@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6aed5a0.css",
-    "main.js": "/static/js/main.b4b9f315.js",
-    "static/media/banner.svg": "/static/media/banner.09578bb1ea160af1404a.svg",
+    "main.css": "/static/css/main.ee32356e.css",
+    "main.js": "/static/js/main.dbb8be06.js",
+    "static/media/banner.svg": "/static/media/banner.09578bb1ea160af1404a7dbebd32eb30.svg",
     "static/media/jo.svg": "/static/media/jo.72dc8b5463102306e54c124ef454721f.svg",
     "static/media/strongside.svg": "/static/media/strongside.9e1c739aa775f2fc9d69f12c9e913962.svg",
     "static/media/trud.svg": "/static/media/trud.96ad063158747a7a4f7ab4534e5e777d.svg",
@@ -11,26 +11,24 @@
     "static/media/avatar.svg": "/static/media/avatar.a5388a8ab0c58eaaadd205b24bbb2a41.svg",
     "static/media/genesis-art.svg": "/static/media/genesis-art.1cfabc049d0ec361d4eadeebae11a111.svg",
     "static/media/logo.svg": "/static/media/logo.763366bc2386cb7f62387b51d2cfa53d.svg",
-    "static/media/footer-logo.svg": "/static/media/footer-logo.0c47ee8c77a874eb5e47c09c5db54a06.svg",
+    "static/media/footer-logo.svg": "/static/media/footer-logo.e667b0031b1f4534b7d66a1100b2ffb4.svg",
     "static/media/OpenSea.svg": "/static/media/OpenSea.574d33d0f5cc004bfb38dfad1d956970.svg",
-    "static/media/IG-Button.svg": "/static/media/IG-Button.6bc812c5cd5a9496fd3acb4e9051552f.svg",
     "static/media/Discord Button.svg": "/static/media/Discord Button.3ab3e5c76a8a436b2a0f24bb073759c4.svg",
+    "static/media/About-Header.svg": "/static/media/About-Header.da957c06898a0048408fd5443039520b.svg",
     "static/media/twitter-button.svg": "/static/media/twitter-button.f17f99cd654fa1b3658da5d11ae44562.svg",
-    "static/media/About-Header.svg": "/static/media/About-Header.5315959cd05a85c169995f2d789d8ba7.svg",
-    "static/media/FAQ-Header.svg": "/static/media/FAQ-Header.6cc65bd287e340e3183367da090afe0d.svg",
-    "static/media/Who-Are-We-Header.svg": "/static/media/Who-Are-We-Header.2504f2a9d87388e5938412fdd4e9d9c5.svg",
+    "static/media/Who-Are-We-Header.svg": "/static/media/Who-Are-We-Header.4654152ccd07fd79e2e2393df8babd7a.svg",
+    "static/media/FAQ-Header.svg": "/static/media/FAQ-Header.41184b899a5f77272a2e7ccba5a4d40d.svg",
+    "static/media/Roadmap-Header.svg": "/static/media/Roadmap-Header.8b346ba83c0eea7ed3bfb54c08cbfebe.svg",
     "index.html": "/index.html",
-    "static/media/Roadmap-Header.svg": "/static/media/Roadmap-Header.15d851a175c0d2d75ce6f2ac90429e51.svg",
-    "static/media/Mint-Now-Button.svg": "/static/media/Mint-Now-Button.5a903eed428c88294f8d.svg",
     "static/media/plus.svg": "/static/media/plus.ce4c4e261ade23b15c927321d4266fdc.svg",
     "static/media/minus.svg": "/static/media/minus.afa39b03dde9b0666f8efd9062e83dc3.svg",
-    "static/media/Connect-Empty-Button.svg": "/static/media/Connect-Empty-Button.3851b6e25d49bfc1e7ab.svg",
+    "static/media/EmptyButton.svg": "/static/media/EmptyButton.98f4f24d83fe6686e093.svg",
     "static/media/Rectangle.svg": "/static/media/Rectangle.2b52c6314f1e480a9d68.svg",
-    "main.d6aed5a0.css.map": "/static/css/main.d6aed5a0.css.map",
-    "main.b4b9f315.js.map": "/static/js/main.b4b9f315.js.map"
+    "main.ee32356e.css.map": "/static/css/main.ee32356e.css.map",
+    "main.dbb8be06.js.map": "/static/js/main.dbb8be06.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6aed5a0.css",
-    "static/js/main.b4b9f315.js"
+    "static/css/main.ee32356e.css",
+    "static/js/main.dbb8be06.js"
   ]
 }
