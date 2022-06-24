@@ -15,7 +15,7 @@ header button {
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  transition: all .12s ease-in-out;
+  transition: all 0.12s ease-in-out;
   border: none;
   max-width: 100%;
   width: 146px;
@@ -24,7 +24,7 @@ header button {
   font-family: "Dharma";
   font-weight: 700;
   cursor: pointer;
-  transition: all .12s ease-in-out;
+  transition: all 0.12s ease-in-out;
 }
 
 header button:hover {
@@ -93,42 +93,71 @@ header button:active {
   display: flex;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
   header {
     display: grid;
-    padding: 0px 25px;
-    grid-template-areas:
-    "avatar avatar socials connect"
-    "avatar avatar logo logo"
-    "avatar avatar mint-btn mint"
-    "avatar avatar mint-btn mint"
+    align-content: end;
+    padding: 0px 122px 0px 25px;
+    justify-content: space-between;
+    column-gap: 15px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "avatar container";
   }
 
   .avatar {
     grid-area: avatar;
     margin-left: 0;
     width: 100%;
+    justify-self: stretch;
   }
 
-  .connect-btn {
-    grid-area: connect;
+  .container {
+    grid-area: container;
+    margin: auto;
+    margin-bottom: 50px;
   }
 
   .socials {
-    grid-area: socials;
+    display: flex;
     flex-direction: row-reverse;
     column-gap: 15px;
   }
 
+  .socials button {
+    width: 65px;
+  }
+
+  .upper-btn-item {
+    grid-area: socials;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-bottom: 135px;
+  }
+
+  .connect-btn {
+    margin-bottom: 0;
+    max-width: 100%;
+    width: 190px;
+  }
+
   .logo {
     grid-area: logo;
+    justify-self: end;
   }
 
   .mint-btn {
-    grid-area: mint-btn;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 210px;
   }
 
-  .mint-edit-items {
+  .lower-btn-item {
     grid-area: mint;
+    margin-top: 61px;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 45px;
   }
 }
