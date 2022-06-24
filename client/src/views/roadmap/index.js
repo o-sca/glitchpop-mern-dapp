@@ -4,12 +4,7 @@ import "../../assets/styles/roadmap.css";
 const RoadMap = () => {
   return (
     <div className="roadmap" id="roadmap">
-      <object
-        type="image/svg+xml"
-        data={roadmapHeader}
-        aria-label="header"
-        alt="roadmap-header"
-      />
+      <img src={roadmapHeader} alt="roadmap-header" />
       <p>
         No roadmap, no crazy promises. We are enjoying and appreciating the
         current condition and state of the market and would like to as a team to

@@ -19,9 +19,9 @@ const App = () => {
           <Header />
           <main>
             <AboutUs />
-            {/* <RoadMap />
-            <WhoAreWe />
-            <FAQ /> */}
+            <RoadMap />
+            {/* <WhoAreWe />*/}
+            <FAQ />
           </main>
           <Footer />
         </Route>
