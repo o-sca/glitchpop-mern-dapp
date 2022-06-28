@@ -1,17 +1,14 @@
 import aboutUsImg from "../../assets/images/genesis-art.svg";
-import aboutUsHeader from "../../assets/headers/About-Header.svg";
 import "../../assets/styles/aboutus.css";
 
 const AboutUs = () => {
   return (
     <div className="about-us" id="about-us">
       <div className="left">
-        <object
-          type="image/svg+xml"
-          aria-label="header"
-          data={aboutUsHeader}
-          alt="about-header"
-        />
+        <div className="about-us-header">
+          <div>ABOUT</div>
+          <div>GLITCHPOP</div>
+        </div>
         <p>
           Project GLITCHPOP is our 1500 GENESIS hand drawn and generative art
           project. It is based on girls who have stumbled upon the dream world

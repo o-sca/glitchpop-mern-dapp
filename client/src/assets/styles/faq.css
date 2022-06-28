@@ -5,9 +5,18 @@
   font-size: 24px;
 }
 
-.faq-container img {
+.faq-header {
+  font-family: "Dharma";
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 84px;
+  letter-spacing: 3.28125px;
+  text-align: left;
+  max-width: 100%;
+  background-color: #FF007B;
+  width: fit-content;
+  padding: 0px 10px;
   margin-bottom: 53px;
-  max-width: 649px;
 }
 
 .faq-container hr {

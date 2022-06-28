@@ -8,18 +8,34 @@
   letter-spacing: 0px;
 }
 
-.left object {
+.left img {
   width: 158px;
   height: 109px;
 }
 
 .left p {
   margin-top: 14px;
-  
 }
 
 .right {
   margin-top: 25px;
+}
+
+.about-us-header {
+  font-family: "Dharma";
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 84px;
+  letter-spacing: 3.28125px;
+  text-align: left;
+  max-width: 100%;
+}
+
+.about-us-header div {
+  margin-bottom: 10px;
+  background-color: #FF007B;
+  width: fit-content;
+  padding: 0px 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -39,7 +55,7 @@
     margin: auto;
   }
 
-  .left object {
+  .about-us-header {
     margin-bottom: 31px;
   }
 

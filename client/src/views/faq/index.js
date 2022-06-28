@@ -1,4 +1,3 @@
-import faqHeader from "../../assets/headers/FAQ-Header.svg";
 import { faqData } from "./faq.content";
 import { discordEvent } from "../../components/buttons/Socials.handler";
 import Accordion from "../../components/Accordion";
@@ -7,7 +6,7 @@ import "../../assets/styles/faq.css";
 const FAQ = () => {
   return (
     <div className="faq-container" id="faq-container">
-      <img src={faqHeader} alt="faq-header" />
+      <div className="faq-header">FREQUENTLY ASKED QUESTIONS</div>
       <hr />
       {faqData.map(({ title, content }) => {
         return <Accordion title={title} content={content} key={title} />;

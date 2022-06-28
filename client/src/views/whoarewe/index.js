@@ -1,4 +1,3 @@
-import whoAreWeHeader from "../../assets/headers/Who-Are-We-Header.svg";
 import chuchudrewAvatar from "../../assets/images/chuchudrew.svg";
 import { whoAreWeData } from "./whoarewe.content";
 import { chuTwitter } from "../../components/buttons/Socials.handler";
@@ -18,7 +17,7 @@ const WhoAreWe = () => {
 
   return (
     <div className="who-are-we" id="who-are-we">
-      <img src={whoAreWeHeader} alt="who-are-we-header" />
+      <div className="who-are-we-header">WHO ARE WE</div>
       <div className="chuchudrew-container">
         <img src={chuchudrewAvatar} alt="chuchudrew" />
         <div className="chuchu-info">
@@ -30,8 +29,7 @@ const WhoAreWe = () => {
             drawings, create stickers, and all sorts of arts and crafts. We hope
             to highlight her art and hope that you all will support her.
           </p>
-          <div className="chu-socials">
-          </div>
+          <div className="chu-socials"></div>
         </div>
       </div>
       <div className="other-founders-container">
