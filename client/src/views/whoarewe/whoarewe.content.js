@@ -18,7 +18,7 @@ export const whoAreWeData = [
   },
   {
     "avatar": strongside,
-    "name": "osca",
+    "name": "strongside",
     "position": "Full Stack Developer",
     "bio": "Likes to develop."
   },

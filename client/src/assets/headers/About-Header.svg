@@ -6,7 +6,21 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
->
+>    
+    @font-face {
+      font-family: "Dharma";
+      src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot");
+      src: url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.eot?#iefix")
+          format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff2")
+          format("woff2"),
+        url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.woff")
+          format("woff"),
+        url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.ttf")
+          format("truetype"),
+        url("//db.onlinewebfonts.com/t/5c5772b491b3e1c39beb61efcd6824f7.svg#DharmaGothicEW01-Bold")
+          format("svg");
+    }
     <title>About-Header</title>
     <g
     id="Page-1"
@@ -38,7 +52,7 @@
         />
                 <text
           id="about-glitchpop"
-          font-family="DharmaGothicE-Bold, Dharma Gothic E"
+          font-family="Dharma"
           font-size="70"
           font-weight="bold"
           letter-spacing="3.28125"
