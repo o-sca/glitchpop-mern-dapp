@@ -7,6 +7,7 @@ header {
   display: grid;
   grid-template-rows: auto;
   min-height: 100vh;
+  width: 100%;
 }
 
 header button {
@@ -91,6 +92,7 @@ header button:active {
 
 .mobile {
   display: flex;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

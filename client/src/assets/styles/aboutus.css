@@ -6,11 +6,8 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0px;
-}
-
-.left img {
-  width: 158px;
-  height: 109px;
+  align-items: center;
+  column-gap: 30px;
 }
 
 .left p {

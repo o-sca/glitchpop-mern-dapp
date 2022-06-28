@@ -10,10 +10,10 @@ const AboutUs = () => {
           <div>GLITCHPOP</div>
         </div>
         <p>
-          Project GLITCHPOP is our 1500 GENESIS hand drawn and generative art
+          Project GLITCHPOP is our 2200 GENESIS hand drawn and generative art
           project. It is based on girls who have stumbled upon the dream world
           of the Ethereum metaverse. We are a new and upcoming project/team that
-          is looking to provide an ecosystem of unique art. Our 1500 Genesis
+          is looking to provide an ecosystem of unique art. Our 2200 Genesis
           collection will be a key piece in access to future collections that we
           want to provide and will follow along with the journey and challenges
           that these girls face in the mysterious dream world.
