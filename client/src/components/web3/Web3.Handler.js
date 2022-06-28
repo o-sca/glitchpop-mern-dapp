@@ -60,10 +60,16 @@ export async function mintEvent() {
     contractData.abi,
     contractData.address
   );
+  
+  let costToMint;
 
-  const valueInWei = await contract.methods.cost().call();
   const numOfMints = document.querySelector(".num-mints").selectedIndex + 1;
-  const costToMint = valueInWei * numOfMints;
+  if (await checkFreeSupply(numOfMints)) {
+    costToMint = 0;
+  } else {
+    const valueInWei = await contract.methods.cost().call();
+    costToMint = valueInWei * numOfMints;
+  }
 
   try {
     let tx = await contract.methods.mint(numOfMints).send({
@@ -78,6 +84,17 @@ export async function mintEvent() {
     return false;
   }
 }
+
+async function checkFreeSupply(mintAmount) {
+  const contractData = await fetchContract();
+  const contract = new web3.eth.Contract(
+    contractData.abi,
+    contractData.address
+  );
+  const maxFreeSupply = await contract.methods.maxFreeSupply().call();
+  const totalSupply = await contract.methods.totalSupply().call();
+  return maxFreeSupply > totalSupply + mintAmount;
+};
 
 export const fetchWalletInfo = () => {
   return {

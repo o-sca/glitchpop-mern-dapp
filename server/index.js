@@ -1,7 +1,5 @@
-// require("dotenv").config();
+require("dotenv").config();
 const http = require('http');
-const config = require("config");
-
 
 const { ExpressInstance } = require('./server.js');
 
@@ -10,7 +8,6 @@ const { ExpressInstance } = require('./server.js');
     const server = http.createServer(await ExpressInstance());
     const address = process.env.ADDRESS;
     const port = process.env.PORT;
-
     server.listen(port, address, err => {
       if (err) return console.error(err);
     

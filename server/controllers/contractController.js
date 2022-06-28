@@ -14,10 +14,10 @@ const NotFoundError = {
 exports.fetchContract = async (req, res) => {
   const [contractData] = await contractModel.find({});
   if (!contractData) return res.status(500).json(NotFoundError);
-
+  
   address = contractData.address;
   abi = JSON.parse(contractData.abi);
-
+  
   return res.json({
     address: address,
     abi: abi
